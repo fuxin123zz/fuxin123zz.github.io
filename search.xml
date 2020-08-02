@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/05/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>my_site</title>
+    <url>/2020/05/17/test-my-site/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>orld</title>
+    <url>/2020/05/17/orld/</url>
+    <content><![CDATA[<p>We</p>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Manjaro安装调教</title>
+    <url>/2020/01/31/1111-01-01-Manjaro/</url>
+    <content><![CDATA[<h1 id="在Windows系统上进行分区"><a href="#在Windows系统上进行分区" class="headerlink" title="在Windows系统上进行分区"></a>在Windows系统上进行分区</h1><p>进入windows磁盘管理器，分别新建两个简单卷，只设置大小，<strong>不需要格式化</strong>。一个设置为600M大小用于挂载efi,另一个用于挂载根目录/,大小随意。(我是在一块500g的固态上分出一半来装的，需要注意的是如果重新装系统的时候,挂在efi那个分区不能直接格式化删除，不然后面再分成一样大小的还是挂载efi会报错，没搞懂什么问题，一开始分的1g,后面直接格式化了，一直分1g一直报错，就分了600M装，才莫名成功了，本来都想装虚拟机算了。)</p>
+<p><strong>制作Manjaro镜像</strong></p>
+<p>直接官网下的kde镜像，此次使用的是KDE Plasma 18.1.5版本， 然后用刻录工具刻录到u盘上，这次使用的是<a href="http://7dx.pc6.com/wwb5/USBWriter13.zip" target="_blank" rel="noopener">usbwrite</a> ,也可以使用rufus。</p>
+<a id="more"></a>
+
+<h1 id="Manjaro系统安装"><a href="#Manjaro系统安装" class="headerlink" title="Manjaro系统安装"></a>Manjaro系统安装</h1><h2 id="BIOS的设置关闭掉Secure-Boot"><a href="#BIOS的设置关闭掉Secure-Boot" class="headerlink" title="BIOS的设置关闭掉Secure Boot"></a>BIOS的设置关闭掉Secure Boot</h2><p>关闭掉Secure Boot<br>硬盘模式设置为ahci（根据机型貌似有些不用设置）<br>引导模式使用uefi（据说双系统win是mbr则manjaro也使用mbr比较好，我的是GPT）</p>
+<h2 id="进入安装界面进行安装进入U盘之后首先回车选择最后一个是简体中文"><a href="#进入安装界面进行安装进入U盘之后首先回车选择最后一个是简体中文" class="headerlink" title="进入安装界面进行安装进入U盘之后首先回车选择最后一个是简体中文"></a>进入安装界面进行安装进入U盘之后首先回车选择最后一个是简体中文</h2><ol>
+<li>进入U盘之后首先回车选择最后一个是简体中文</li>
+<li>driver  因为是n卡就选择no free，其他情况选free或网上查bios选项等配置</li>
+<li>然后回车 Boot:Manjaro.x86_64 kde</li>
+<li>进入安装安装界面之后点击launch installr</li>
+<li>地区选择Asia 区域选择Shanghai</li>
+<li>分区,双系统有两种情况</li>
+</ol>
+<h3 id="mbr启动"><a href="#mbr启动" class="headerlink" title="mbr启动"></a>mbr启动</h3><p>这里我们直接划分出来一块分区文件系统选择ext4，挂载点 <code>/</code>  </p>
+<h3 id="uefi启动模式"><a href="#uefi启动模式" class="headerlink" title="uefi启动模式"></a>uefi启动模式</h3><p>这里需要一个esp分区<br>划出600MB分区，文件系统fat16或fat32，挂载点<code>boot/efi</code>，标记boot，esp<br>还需要一个根分区也就是系统分区<br>划出分区，文件系统ext4，挂载点 <code>/</code> ，无需标记<br>可以进行安装了。(/home,/swap都不用管，要是只有8g内存可以考虑配置/swap，挂载点选linuxswap就行)<br>安装完后点击重启计算机，在完全关闭后拔出u盘。开机后进入bios选择Manjaro引导到第一位，保存进入系统。</p>
+<h1 id="系统设置和软件安装"><a href="#系统设置和软件安装" class="headerlink" title="系统设置和软件安装"></a>系统设置和软件安装</h1><h2 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h2><p><strong>进行软件源设置以及系统更新首先，我们先把它打开文件的方式改为双击</strong><br>首先，我们先把它打开文件的方式改为双击<br><code>系统设置-&gt;桌面行为-&gt;工作空间-&gt;双击打开文件和文件夹</code></p>
+<p>更换中国源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman-mirrors -i -c China -m rank</span><br></pre></td></tr></table></figure>
+<p>在第命令结束的时候会弹出一个窗口让你选择想要使用的源，选最快的那个就行了。(例如:<a href="https://mirrors.ustc.edu.cn/manjaro/" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/manjaro/</a> 中科大的)<br>或者直接编辑文件添加源地址:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo nano /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
+<p>地址从这<a href="https://github.com/archlinuxcn/mirrorlist-repo" target="_blank" rel="noopener">获取</a>,添加到文件末尾,例如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## SJTUG 软件源镜像服务</span></span><br><span class="line">Server = https://mirrors.sjtug.sjtu.edu.cn/manjaro/stable/<span class="variable">$repo</span>/<span class="variable">$arch</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 清华大学镜像源</span></span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/<span class="variable">$repo</span>/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
+<p><strong>保存设置方法：用nanoc编辑好文本后按crl + x 然后按y再按回车即可。另外manjaro中的pacman相当于centos（或redhat）中的yum命令</strong><br>然后更新一下数据源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 更新源列表</span></span><br><span class="line">sudo pacman-mirrors -g</span><br></pre></td></tr></table></figure>
+<p>接着更换增加archlinuxcn软件仓库源:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo nano /etc/pacman.conf</span><br></pre></td></tr></table></figure>
+<p>在最下方添加：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#添加archlinuxcn软件源：</span></span><br><span class="line">[archlinuxcn]</span><br><span class="line">SigLevel = Optional TrustedOnly</span><br><span class="line"><span class="comment">#SJTUG 软件源</span></span><br><span class="line">Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/<span class="variable">$arch</span></span><br><span class="line"><span class="comment">#清华源</span></span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="variable">$arch</span></span><br><span class="line"></span><br><span class="line">[antergos]</span><br><span class="line">SigLevel = TrustAll</span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/antergos/<span class="variable">$repo</span>/<span class="variable">$arch</span></span><br><span class="line"></span><br><span class="line">[arch4edu]</span><br><span class="line">SigLevel = TrustAll</span><br><span class="line">Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
+<p>然后运行两条命令:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sduo pacman -Syy <span class="comment"># -Syy表示将本地的软件与软件仓库进行同步</span></span><br><span class="line">sudo pacman -S archlinuxcn-keyring <span class="comment">#-S表示安装某一软件 安装archlinuxcn签名钥匙</span></span><br><span class="line">sudo pacman -S antergos-keyring</span><br></pre></td></tr></table></figure>
+<p>之后更新一下系统:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -Syu <span class="comment">#可以更新系统的一切软件包</span></span><br></pre></td></tr></table></figure>
+<p>更新完后安装下系统缺少的字体解决中文乱码问题:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S wqy-microhei</span><br></pre></td></tr></table></figure>
+
+<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="安装AUR管理工具"><a href="#安装AUR管理工具" class="headerlink" title="安装AUR管理工具:"></a>安装AUR管理工具:</h3><p>想要使用AUR中的软件，一种方式是在图形的软件安装界面的设置中把AUR打开，然后搜索进行安装，另外是使用命令行工具进行安装。由于Yaourt已经不再维护，这里选择了Yay来管理AUR仓库中的软件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S yay</span><br></pre></td></tr></table></figure>
+<p>Yay默认使用法国的aur.archlinux.org作为AUR源，可以更改为国内清华大学提供的镜像。<br>yay 用户执行以下命令修改aururl:  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yay --aururl <span class="string">"https://aur.tuna.tsinghua.edu.cn"</span> --save</span><br></pre></td></tr></table></figure>
+<p>修改的配置文件位于 ~/.config/yay/config.json  去掉 # AURURL 的注释，修改为</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">AURURL="https://aur.tuna.tsinghua.edu.cn"</span><br></pre></td></tr></table></figure>
+<p><strong>yay 安装命令不需要加 sudo</strong>,yay的命令参数跟pacman参数基本一致,还可通过以下命令查看修改过的配置:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yay -P -g</span><br></pre></td></tr></table></figure>
+<p>yay 的常用命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yay -S package <span class="comment"># 从 AUR 安装软件包</span></span><br><span class="line">$ yay -Rns package <span class="comment"># 删除包</span></span><br><span class="line">$ yay -Syu <span class="comment"># 升级所有已安装的包</span></span><br><span class="line">$ yay -Ps <span class="comment"># 打印系统统计信息</span></span><br><span class="line">$ yay -Qi package <span class="comment"># 检查安装的版本</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装中文字体"><a href="#安装中文字体" class="headerlink" title="安装中文字体:"></a>安装中文字体:</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S wqy-zenhei</span><br><span class="line">sudo pacman -S wqy-bitmapfont</span><br><span class="line">sudo pacman -S wqy-microhei</span><br><span class="line"><span class="comment">#Manjaro自带了思源系列字体（Noto家族）,补个Emoji：</span></span><br><span class="line">yay -S noto-fonts-emoji</span><br><span class="line">sudo pacman -S adobe-source-han-sans-cn-fonts</span><br><span class="line">sudo pacman -S adobe-source-han-serif-cn-fonts</span><br></pre></td></tr></table></figure>
+
+<h4 id="linux字体推荐-可选"><a href="#linux字体推荐-可选" class="headerlink" title="linux字体推荐(可选)"></a>linux字体推荐(可选)</h4><p>中文字体推荐使用：文泉驿、思源字体。安装如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S wqy-microhei wqy-bitmapfont wqy-zenhei wqy-microhei-lite</span><br><span class="line">$ sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts</span><br></pre></td></tr></table></figure>
+
+<p>西文字体推荐使用dejavu、noto字体。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S ttf-dejavu</span><br><span class="line">$ sudo pacman -S noto-fonts noto-fonts-extra noto-fonts-emoji noto-fonts-cjk</span><br></pre></td></tr></table></figure>
+
+<h4 id="优化–-gt-字体–-gt-缩放字体–-gt-1-25"><a href="#优化–-gt-字体–-gt-缩放字体–-gt-1-25" class="headerlink" title="优化–&gt;字体–&gt;缩放字体–&gt;1.25"></a>优化–&gt;字体–&gt;缩放字体–&gt;1.25</h4><p>字体我用的是思源黑体（adobe家开源的），文泉驿和google家的noto系列也不错。<br>noto系列cjk指的是中国韩国和日本，中国大陆好像是S开头的字体，因为太大了就没有安装。<br>chrome等其他浏览器可以在浏览器设置里改一下字体风格，然后在/etc/fonts/新建一个local.conf文件写入：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">fontconfig</span> <span class="meta-keyword">SYSTEM</span> <span class="meta-string">"fonts.dtd"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">fontconfig</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">match</span> <span class="attr">target</span>=<span class="string">"font"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">edit</span> <span class="attr">name</span>=<span class="string">"autohint"</span> <span class="attr">mode</span>=<span class="string">"assign"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bool</span>&gt;</span>false<span class="tag">&lt;/<span class="name">bool</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">edit</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">edit</span> <span class="attr">name</span>=<span class="string">"hinting"</span> <span class="attr">mode</span>=<span class="string">"assign"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bool</span>&gt;</span>false<span class="tag">&lt;/<span class="name">bool</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">edit</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">edit</span> <span class="attr">name</span>=<span class="string">"hintstyle"</span> <span class="attr">mode</span>=<span class="string">"assign"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">const</span>&gt;</span>none<span class="tag">&lt;/<span class="name">const</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">edit</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">match</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fontconfig</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样软件默认就不会用自己的文字处理方式了，和win下字体基本无太大差别，字体模糊问题解决。</p>
+<h3 id="中文输入法安装"><a href="#中文输入法安装" class="headerlink" title="中文输入法安装:"></a>中文输入法安装:</h3><p>fcitx和ibus都可以配置中文输入法<br>fcitx 或 ibus 两个选其一 推荐fcitx(一开始装了ibus，后面转了fcitx)</p>
+<h4 id="fcitx5对比fcitx4"><a href="#fcitx5对比fcitx4" class="headerlink" title="fcitx5对比fcitx4"></a>fcitx5对比fcitx4</h4><ul>
+<li>fcitx5的输入体验的确比上个版本好一些，输入相对来说比较流畅，<strong>输入中文分号不需要空格，而是按两下分号键</strong>。</li>
+<li>自动DPI功能还需要优化。</li>
+</ul>
+<h4 id="fcitx4安装"><a href="#fcitx4安装" class="headerlink" title="fcitx4安装"></a>fcitx4安装</h4><p><del>1. 安装安装输入法模块:</del><br><del>```bash</del><br><del>sudo pacman -S fcitx-im #安装全部输入法模块</del></p>
+<p><del>#终端出现以下提示:</del><br><del>$ yay -S fcitx-im</del><br><del>:: There are 4 members in group fcitx-im:</del><br><del>:: Repository community</del><br>   <del>1) fcitx  2) fcitx-gtk2  3) fcitx-gtk3  4) fcitx-qt5</del></p>
+<p><del>Enter a selection (default=all):</del><br><del>#直接按回车，默认4个都安装，不然后面在有些应用或者终端调不出输入法</del><br><del>```</del></p>
+<p>2020-05-06更新：  </p>
+<ol>
+<li><p>现在网络上大部分老教程还是安装fcitx,fcitx-gtk2,fcitx-gtk3,fcitx-qt4,fcitx-qt5,fcitx-configtool的传统方法，目前在Archlinux的源中，fcitx-im包组已经取消了fcitx-qt4包，但是搜狗输入法Linux版是基于QT4的，少了这个包，搜狗输入法就无法正常启动。这里安装也是担心后面有些应用或者终端不支持QT5调不出输入法。<br>首先，如果以前安装了fcitx，全部删除：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -Rsn fcitx-im fcitx-configtool</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后安装fcitx-lilydjwg-git这个包，fcitx-lilydjwg-git这个包用来替换fcitx-im包组中除fcitx-qt5之外的所有包，其中包含了fcitx-qt4包。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx-lilydjwg-git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装中文输入法选其一（我选的sunpinyin，rime和goolepinyin据说不支持模糊音）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx-sunpinyin</span><br><span class="line">sudo pacman -S fcitx-rime</span><br><span class="line">sudo pacman -S fcitx-libpinyin</span><br><span class="line">sudo pacman -S fcitx-googlepinyin</span><br></pre></td></tr></table></figure></li>
+<li><p>安装云拼音（可选）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S fcitx-cloudyinpin</span><br></pre></td></tr></table></figure>
+<p>安装fcitx-cloudpinyin后，googlepinyin，fcitx自带的pinyin，sunpinyin的候选次列表都会具有云辅助，更加智能。（rime不支持）</p>
+</li>
+</ol>
+<blockquote>
+<p>安装后重启 Fcitx 即可，所选的云拼音输入结果会自动添加到当前输入法的词库中。提醒：建议在fcitx设置里面将“云拼音来源”由Google改为“百度”，Google国内访问不是很顺畅。<br>启用云拼音后，从云拼音获得的候选词会默认添加到候选词列表中的第二个，显示位置可以通过云拼音的设置配置。如果云拼音的结果和本地输入法给出的结果一致，云拼音后选项会和本地产生的候选项自动合并，不会产生重复的候选项。<br>若安装fcitx-cloudpinyin后，在配置程序里却没有看见云拼音，记得勾上“高级”复选框。这时云拼音会显示出来，再勾上云拼音。<br>注意: 不推荐将云拼音候选词设为第一个候选词，因为当网络情况不好，没有及时返回云拼音结果，那么云拼音结果将默认降到第二候选词的位置，于是这个过程可能会涉及到默认候选词的改变。</p>
+</blockquote>
+<ol start="5">
+<li><p>到这里，Manjaro下的中文输入法基本就安装好了，但是还没有安装fcitx图形设置界面，另外少了个fcitx-qt5包，不能在qt5程序下输入，需要继续安装：<br>GNOME（GTK）用户：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S fcitx-configtool fcitx-qt5</span><br></pre></td></tr></table></figure>
+<p>注意：fcitx-qt5可选依赖于fcitx-configtool，可以直接安装fcitx-configtool，然后选择fcitx-qt5。<br>KDE（QT）用户：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S kcm-fcitx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在/etc/profile或者~/.xprofile文件中，右键粘贴如下代码并保存:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=fcitx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>注销重新登录或者重启系统。</strong></p>
+</li>
+<li><p>扩展点-检查设置<br>如果出现问题，可使用下面打命令，看下哪里配置异常，处理一下就可以了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ fcitx-diagnose</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="fcitx5安装"><a href="#fcitx5安装" class="headerlink" title="fcitx5安装"></a>fcitx5安装</h4><p>在一些大佬的博客上看到Fcitx5，试了下发现自带的pinyin准确度确实很高，而且输入设置也整合到了设置中心，对KDE用户相当友好。fcitx的官方Repo在<a href="https://github.com/fcitx/fcitx5" target="_blank" rel="noopener">GitHub</a>  </p>
+<ol>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#卸载fcitx4</span></span><br><span class="line">pacman -Rs $(pacman -Qsq fcitx) </span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以直接全部安装不用考虑安装顺序(archlinuxcn源)</span></span><br><span class="line">$ sudo pacman -S fcitx5-git <span class="comment"># 安装fcitx5框架</span></span><br><span class="line">$ sudo pacman -S fcitx5-gtk-git <span class="comment"># 增加对gtk程序的支持</span></span><br><span class="line">$ sudo pacman -S fcitx5-qt5-git <span class="comment"># 增加对QT5程序的支持</span></span><br><span class="line">$ sudo pacman -S fcitx5-qt4-git  <span class="comment"># 有QT4程序需要增加对QT4程序的支持</span></span><br><span class="line">$ sudo pacman -S fcitx5-chinese-addons-git <span class="comment"># 增加对中文输入的组件</span></span><br><span class="line">$ sudo pacman -S kcm-fcitx5-git <span class="comment"># 增加内嵌的输入设置，只限KDE</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以直接安装community源下的包，这里我配的是清华的镜像源，貌似没有同步好，找不到文件，所以用了上面的archlinuxcn源安装的。</span></span><br><span class="line">$ sudo pacman -S fcitx5 fcitx5-gtk fcitx5-qt fcitx5-chinese-addons kcm-fcitx5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置开机自启<br>系统设置-&gt;开机和关机-&gt;自动启动-&gt;添加程序-&gt;搜索Fcitx 选中后确定使Fcitx5自启动（推荐）。<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_fcitx_autostart.webp" alt=""></p>
+</li>
+<li><p>修改配置文件<br>直接启动fcitx5是只有西文键盘的，如果是KDE，可以到系统的输入法配置启用拼音；如果是其他发行版，就需要使用配置文件。<br>首先要确认当前fcitx5是完全退出的状态，如果fcitx5在运行，修改后软件会自动覆写profile配置文件。用户配置在<code>~/.config/fcitx5/profile</code></p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">[Groups/0]</span><br><span class="line"><span class="comment"># Group Name</span></span><br><span class="line"><span class="attribute">Name</span>=默认</span><br><span class="line"><span class="comment"># Layout</span></span><br><span class="line">Default <span class="attribute">Layout</span>=us</span><br><span class="line"><span class="comment"># Default Input Method</span></span><br><span class="line"><span class="attribute">DefaultIM</span>=pinyin</span><br><span class="line"></span><br><span class="line">[Groups/0/Items/0]</span><br><span class="line"><span class="comment"># Name</span></span><br><span class="line"><span class="attribute">Name</span>=keyboard-us</span><br><span class="line"><span class="comment"># Layout</span></span><br><span class="line">Layout=</span><br><span class="line"></span><br><span class="line">[Groups/0/Items/1]</span><br><span class="line"><span class="comment"># Name</span></span><br><span class="line"><span class="attribute">Name</span>=pinyin</span><br><span class="line"><span class="comment"># Layout</span></span><br><span class="line">Layout=</span><br><span class="line"></span><br><span class="line">[GroupOrder]</span><br><span class="line"><span class="attribute">0</span>=默认</span><br></pre></td></tr></table></figure>
+<p>使用默认的pinyin就可以了。</p>
+</li>
+<li><p>设置环境变量<br>使用<code>echo ${XDG_SESSION_TYPE}</code>命令查看，如果是<code>x11</code>即<code>xorg</code>用户，则还应当在<code>~/.xprofile</code>添加如下内容：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">GTK_IM_MODULE</span>=fcitx5</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">QT_IM_MODULE</span>=fcitx5</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">XMODIFIERS</span>=<span class="string">"@im=fcitx5"</span></span><br></pre></td></tr></table></figure>
+<p>如果是<code>wayland</code>用户的话，则修改<code>~/.pam_environment</code>文件</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">GTK_IM_MODULE</span>=fcitx5</span><br><span class="line"><span class="attr">QT_IM_MODULE</span>=fcitx5</span><br><span class="line"><span class="attr">XMODIFIERS</span>=@im=fcitx5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注销重新登录或者重启系统就可以看到fcitx5的启动了。</p>
+</li>
+<li><p>个性化设置  </p>
+</li>
+</ol>
+<p><strong>注意修改配置文件要先彻底关闭fcitx5</strong>  </p>
+<ol>
+<li><p>关闭云拼音<br>如果注重个人隐私的话，建议关闭该选项。修改<code>~/.config/fcitx5/conf/pinyin.conf</code>：</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># Enable Cloud Pinyin</span><br><span class="line"><span class="deletion">-CloudPinyinEnabled=True</span></span><br><span class="line"><span class="addition">+CloudPinyinEnabled=False</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭自动API<br>fcitx5会自动根据多显示器不同的DPI来调整界面大小，但发现经常达不到想要的效果，只好将这一功能关闭，并调整字体大小为14。修改<code>~/.config/fcitx5/conf/classicui.conf</code></p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 按屏幕 DPI 使用</span></span><br><span class="line"><span class="attr">PerScreenDPI</span>=<span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Font (设置成你喜欢的字体)</span></span><br><span class="line"><span class="attr">Font</span>=<span class="string">"Noto Sans Mono Regular 14"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用皮肤<br>使用了<a href="https://github.com/hosxy/Fcitx5-Material-Color" target="_blank" rel="noopener">hosxy的Material-color皮肤</a>，安装非常方便，依照Readme操作即可。效果惊艳，堪比Windows10自带输入法。<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_material_color_teal.webp" alt=""></p>
+</li>
+</ol>
+<p>直接运行命令安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pacman -S fcitx5-material-color</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>使用单行模式(inline_preedit)<br>对于fcitx5自带pinyin 请修改 <code>~/.config/fcitx5/conf/pinyin.conf</code><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 可用时在应用程序中显示预编辑文本</span><br><span class="line"><span class="deletion">-PreeditInApplicaation=False</span></span><br><span class="line"><span class="addition">+PreeditInApplicaation=True</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ol>
+<h4 id="ibus安装"><a href="#ibus安装" class="headerlink" title="ibus安装"></a>ibus安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S ibus <span class="comment">#安装ibus软件包</span></span><br><span class="line">sudo pacman -S ibus-qt</span><br><span class="line">sudo pacman -Ss ^ibus-* <span class="comment">#查看所有可用的输入法</span></span><br></pre></td></tr></table></figure>
+<p>选择一个可用的输入法引擎并安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S ibus-rime</span><br><span class="line">sudo pacman -S ibus--pinyin</span><br><span class="line">sudo pacman -S ibus-googlepinyin</span><br><span class="line">sudo pacman -S libpinyin</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ibus-setup <span class="comment">#运行ibus</span></span><br></pre></td></tr></table></figure>
+<p>出现提示:<img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_ibus.webp" alt=""><br>在<code>$HOME/.bashrc</code>中加入下面这段就好了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br></pre></td></tr></table></figure>
+<p>这样就可以使用该输入法了，但是每次开机都要在命令行中输入ibus-setup才能启动ibus，太麻烦了点。所以把原来的$HOME/.bashrc的内容转移到<code>$HOME/.xprofile</code>中，并且在最后一行添加一条新的内容:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br><span class="line">ibus-daemon -x -d</span><br></pre></td></tr></table></figure>
+<p><strong>再重启发现输入法能开机自动启动了</strong></p>
+<h3 id="更改项目文件英文名"><a href="#更改项目文件英文名" class="headerlink" title="更改项目文件英文名"></a>更改项目文件英文名</h3><p>修改目录映射文件名:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo nano .config/user-dirs.dirs</span><br></pre></td></tr></table></figure>
+<p>修改为以下内容:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">XDG_DESKTOP_DIR=<span class="string">"<span class="variable">$HOME</span>/Desktop"</span></span><br><span class="line">XDG_DOWNLOAD_DIR=<span class="string">"<span class="variable">$HOME</span>/Download"</span></span><br><span class="line">XDG_TEMPLATES_DIR=<span class="string">"<span class="variable">$HOME</span>/Templates"</span></span><br><span class="line">XDG_PUBLICSHARE_DIR=<span class="string">"<span class="variable">$HOME</span>/Public"</span></span><br><span class="line">XDG_DOCUMENTS_DIR=<span class="string">"<span class="variable">$HOME</span>/Documents"</span></span><br><span class="line">XDG_MUSIC_DIR=<span class="string">"<span class="variable">$HOME</span>/Music"</span></span><br><span class="line">XDG_PICTURES_DIR=<span class="string">"<span class="variable">$HOME</span>/Pictures"</span></span><br><span class="line">XDG_VIDEOS_DIR=<span class="string">"<span class="variable">$HOME</span>/Videos"</span></span><br></pre></td></tr></table></figure>
+<p>将Home目录下的中文目录名改为对应的英文名:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv 桌面 to Desktop</span><br><span class="line">mv 下载 to Downloads</span><br><span class="line">mv 模板 to Templates</span><br><span class="line">mv 公共 to Public</span><br><span class="line">mv 文档 to Documents</span><br><span class="line">mv 音乐 to Music</span><br><span class="line">mv 图片 to Pictures</span><br><span class="line">mv 视频 to Videos</span><br></pre></td></tr></table></figure>
+<p><strong>重启系统</strong></p>
+<h3 id="常用软件安装"><a href="#常用软件安装" class="headerlink" title="常用软件安装"></a>常用软件安装</h3><h4 id="支持复杂运算的计算器"><a href="#支持复杂运算的计算器" class="headerlink" title="支持复杂运算的计算器"></a>支持复杂运算的计算器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S speedcrunch</span><br></pre></td></tr></table></figure>
+<p>有些运算我们需注意单位问题，如角度单位（弧度、度数），默认它是弧度，所以你运算sin(30)不会等于0.5，在设置中或使用快捷键切换即可。<br>建议勾选 设置 - 行为 - Enable Complex Numbers，不然你可能连pi（圆周率表示）都无法使用。</p>
+<h4 id="解压工具安装"><a href="#解压工具安装" class="headerlink" title="解压工具安装"></a>解压工具安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S unrar unzip p7zip</span><br><span class="line">sudo pacman -S file-roller <span class="comment">#图形化的解压软件</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="为知笔记"><a href="#为知笔记" class="headerlink" title="为知笔记"></a>为知笔记</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S wiznote</span><br></pre></td></tr></table></figure>
+
+<h4 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yay -S xmind-zen</span><br></pre></td></tr></table></figure>
+
+<h4 id="WPS及WPS需要的中文字体"><a href="#WPS及WPS需要的中文字体" class="headerlink" title="WPS及WPS需要的中文字体"></a>WPS及WPS需要的中文字体</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S wps-office</span><br><span class="line">yay -S wps-office-fonts wps-office-mime ttf-wps-fonts</span><br></pre></td></tr></table></figure>
+
+<h4 id="福昕PDF阅读器"><a href="#福昕PDF阅读器" class="headerlink" title="福昕PDF阅读器"></a>福昕PDF阅读器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S foxitreader</span><br></pre></td></tr></table></figure>
+
+<h4 id="媒体播放器"><a href="#媒体播放器" class="headerlink" title="媒体播放器"></a>媒体播放器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S vlc <span class="comment">#一个免费且开源的跨平台媒体播放器以及框架，可以播放大多数格式的多媒体文件以及 DVS，音频 CD，VCD，以及各种流媒体协议</span></span><br><span class="line">$ sudo pacman -S ffmpeg</span><br><span class="line"></span><br><span class="line">$ sudo pacman -S kodi <span class="comment"># 一款获得殊荣的免费开源（GPL）软件，支持视频，音乐，图片，游戏以及更多内容的媒体中心。</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="跨平台音乐播放器listen1"><a href="#跨平台音乐播放器listen1" class="headerlink" title="跨平台音乐播放器listen1"></a>跨平台音乐播放器listen1</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yay -S listen1-desktop</span><br></pre></td></tr></table></figure>
+
+<h4 id="TeamViwer安装"><a href="#TeamViwer安装" class="headerlink" title="TeamViwer安装"></a>TeamViwer安装</h4><p>直接运行命令安装的包打开并不能用，需要到<a href="https://www.teamviewer.com/en/download/linux/" target="_blank" rel="noopener">官网</a>下载包解压运行。<br>选择 Other systems (not officially supported)的<a href="https://download.teamviewer.com/download/linux/teamviewer_amd64.tar.xz" target="_blank" rel="noopener">↓ x86 64bit</a><br>下载到的是：<code>teamviewer_15.3.2682_amd64.tar.xz</code></p>
+<h5 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h5><p>两种解压方式：</p>
+<ul>
+<li>右键鼠标选择解压</li>
+<li>命令行解压<code>tar xvf teamviewer_15.3.2682_amd64.tar.xz</code></li>
+</ul>
+<h5 id="运行Teamviwer"><a href="#运行Teamviwer" class="headerlink" title="运行Teamviwer"></a>运行Teamviwer</h5><p>把解压出来的目录放到你想的任意目录，可以放在<code>/opt/</code>下，<code>cd teamviewer</code>进入目录里，运行<code>./teamviewer</code></p>
+<h5 id="添加到Dash-to-Dock"><a href="#添加到Dash-to-Dock" class="headerlink" title="添加到Dash to Dock"></a>添加到Dash to Dock</h5><p>修改安装目录下的teamviewer.desktop,修改图标文件路径</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">Icon=<span class="regexp">/opt/</span>teamviewer<span class="regexp">/tv_bin/</span>desktop<span class="regexp">/teamviewer_256.png</span></span><br></pre></td></tr></table></figure>
+<p>然后执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo cp /opt/teamviewer/teamviewer.desktop /usr/share/applications/</span><br></pre></td></tr></table></figure>
+
+<h4 id="ClamAV安装"><a href="#ClamAV安装" class="headerlink" title="ClamAV安装"></a>ClamAV安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S clamav <span class="comment">#Clam 防病毒软件（命令行）</span></span><br><span class="line">sudo pacman -S clamtk <span class="comment">#Clam 防病毒软件（客户端）</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="BleachBit安装"><a href="#BleachBit安装" class="headerlink" title="BleachBit安装"></a>BleachBit安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S bleachbit <span class="comment">#快速释放磁盘空间并不知疲倦地守卫你的隐私。释放缓存，删除 cookie，清除互联网浏览历史，清理临时文件，删除日志，以及更多功能...</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="截图软件"><a href="#截图软件" class="headerlink" title="截图软件"></a>截图软件</h4><h5 id="深度截图"><a href="#深度截图" class="headerlink" title="深度截图"></a>深度截图</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S deepin-screenshot</span><br></pre></td></tr></table></figure>
+
+<h5 id="flameshot"><a href="#flameshot" class="headerlink" title="flameshot"></a>flameshot</h5><h6 id="flameshot安装"><a href="#flameshot安装" class="headerlink" title="flameshot安装"></a>flameshot安装</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S flameshot-git</span><br></pre></td></tr></table></figure>
+
+<h6 id="配置flameshot截图快捷键"><a href="#配置flameshot截图快捷键" class="headerlink" title="配置flameshot截图快捷键"></a>配置flameshot截图快捷键</h6><p>用KDE的桌面环境，可以配置下快捷键：系统设置—-&gt;快捷键—-&gt;自定义快捷键：<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_flameshot_keybord_00.webp" alt=""><br>编辑—-&gt;新建—&gt;全局快捷键—&gt;命令/URL:<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_flameshot_keybord_01.webp" alt=""></p>
+<p><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_flameshot_keybord_02.webp" alt=""><br>动作填入为 flameshot gui</p>
+<h6 id="配置flameshot守护进程"><a href="#配置flameshot守护进程" class="headerlink" title="配置flameshot守护进程"></a>配置flameshot守护进程</h6><p>如果想要配置一些截图选项。执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ flameshot config</span><br></pre></td></tr></table></figure>
+<p><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_flameshot_config_00.webp" alt=""></p>
+<p><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_flameshot_config_01.webp" alt=""><br>要配置下开机启动，因为flameshot是有前后端的，守护进程要有运行才能正常截图！</p>
+<h4 id="壁纸自动定时切换软件—Variety"><a href="#壁纸自动定时切换软件—Variety" class="headerlink" title="壁纸自动定时切换软件—Variety"></a>壁纸自动定时切换软件—Variety</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S variety</span><br></pre></td></tr></table></figure>
+
+<h4 id="系统状态监控"><a href="#系统状态监控" class="headerlink" title="系统状态监控"></a>系统状态监控</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S deepin-system-monitor</span><br></pre></td></tr></table></figure>
+
+<h4 id="硬件温度监测"><a href="#硬件温度监测" class="headerlink" title="硬件温度监测"></a>硬件温度监测</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S psensor</span><br></pre></td></tr></table></figure>
+
+<h4 id="录屏软件"><a href="#录屏软件" class="headerlink" title="录屏软件"></a>录屏软件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S deepin-screen-recorder <span class="comment">#录屏软件，可以录制 Gif 或者 MP4 格式</span></span><br><span class="line">sudo pacman -Ss SimpleScreenRecorder <span class="comment">#另外一个更强大的录屏软件</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="deepin系列软件必备条件"><a href="#deepin系列软件必备条件" class="headerlink" title="deepin系列软件必备条件"></a>deepin系列软件必备条件</h4><p>首先对于非 GNOME 桌面(KDE, XFCE等)需要安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S gnome-settings-daemon</span><br></pre></td></tr></table></figure>
+<p>运行/usr/lib/gsd-xsettings<br>系统设置-&gt;开机或关机-&gt;自动启动-&gt;添加脚本-&gt;输入/usr/lib/gsd-xsettings</p>
+<h4 id="深度QQ"><a href="#深度QQ" class="headerlink" title="深度QQ"></a>深度QQ</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S deepin.com.qq.im</span><br></pre></td></tr></table></figure>
+
+<h4 id="深度微信"><a href="#深度微信" class="headerlink" title="深度微信"></a>深度微信</h4><p>微信是自己从github上下的旧版的包2.7.188版本,并根据文档修改对应的安装配置<br><a href="https://github.com/countstarlight/deepin-wine-wechat-arch" target="_blank" rel="noopener">https://github.com/countstarlight/deepin-wine-wechat-arch</a><br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_deepin_wine_wechat.webp" alt=""><br>安装完后手动切换deepin-wine环境</p>
+<ol>
+<li>安装 deepin-wine<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yay -S deepin-wine</span><br></pre></td></tr></table></figure></li>
+<li>修改 deepin-wine-wechat 的启动文件<br>修改如下两个文件中的 WINE_CMD 的值：<br>/opt/deepinwine/apps/Deepin-WeChat/run.sh<br>/opt/deepinwine/tools/run.sh<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-WINE_CMD="wine"</span></span><br><span class="line"><span class="addition">+WINE_CMD="deepin-wine"</span></span><br></pre></td></tr></table></figure></li>
+<li>对于非 GNOME 桌面(KDE, XFCE等)需要安装 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman Sy gnome-settings-daemon</span><br></pre></td></tr></table></figure>
+并在 /opt/deepinwine/apps/Deepin-WeChat/run.sh 中加入如下几行：<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"> RunApp()</span><br><span class="line">    &#123;</span><br><span class="line"><span class="addition">+    if [[ -z "$(ps -e | grep -o gsd-xsettings)" ]]</span></span><br><span class="line"><span class="addition">+    then</span></span><br><span class="line"><span class="addition">+        /usr/lib/gsd-xsettings &amp;</span></span><br><span class="line"><span class="addition">+    fi</span></span><br><span class="line">        if [ -d "$WINEPREFIX" ]; then</span><br><span class="line">                UpdateApp</span><br><span class="line">        else</span><br></pre></td></tr></table></figure>
+注意：对 /opt/deepinwine/apps/Deepin-WeChat/run.sh 的修改会在 deepin-wine-wechat 更新或重装时被覆盖，可以单独拷贝一份作为启动脚本</li>
+<li>删除原先的微信目录<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -rf ~/.deepinwine/Deepin-WeChat</span><br></pre></td></tr></table></figure></li>
+<li>修复 deepin-wine 字体渲染发虚<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yay -S lib32-freetype2-infinality-ultimate</span><br></pre></td></tr></table></figure>
+注意：切换到 deepin-wine 后，对 wine 的修改，如更改dpi，都改为对 deepin-wine 的修改</li>
+</ol>
+<h4 id="百度网盘"><a href="#百度网盘" class="headerlink" title="百度网盘"></a>百度网盘</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yay -S deepin-wine-baidupan</span><br></pre></td></tr></table></figure>
+
+<h4 id="迅雷"><a href="#迅雷" class="headerlink" title="迅雷"></a>迅雷</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yay -S deepin.com.thunderspeed</span><br></pre></td></tr></table></figure>
+
+<h4 id="Aria2"><a href="#Aria2" class="headerlink" title="Aria2"></a>Aria2</h4><p>下载器，支持 HTTP(S)，FTP，SFTP，BitTorrent和Metalink 协议</p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S aria2</span><br></pre></td></tr></table></figure>
+
+<h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><p>配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">mkdir aria2</span><br><span class="line"><span class="built_in">cd</span> aria2</span><br><span class="line">touch aria2.conf</span><br><span class="line">touch aria2.session</span><br><span class="line">touch aria2.log</span><br></pre></td></tr></table></figure>
+<p>aria2.conf配置文件内容，aria2.session是用来存地址的。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 文件保存相关 ##</span></span><br><span class="line"><span class="comment"># 文件的保存路径(可使用绝对路径或相对路径), 默认: 当前启动位置</span></span><br><span class="line">dir=/home/johnnychan/Downloads</span><br><span class="line"><span class="comment"># 日志文件</span></span><br><span class="line"><span class="built_in">log</span>=/home/johnnychan/aria2/aria2.log</span><br><span class="line"><span class="comment"># 日志级别</span></span><br><span class="line"><span class="built_in">log</span>-level=warn</span><br><span class="line"><span class="comment"># 检查完整性，默认true</span></span><br><span class="line">check-integrity=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 启用磁盘缓存</span></span><br><span class="line">disk-cache=32M</span><br><span class="line"><span class="comment"># 断点续传</span></span><br><span class="line"><span class="built_in">continue</span>=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 文件预分配方式, 能有效降低磁盘碎片, 默认:prealloc</span></span><br><span class="line"><span class="comment"># 预分配所需时间: none &lt; falloc ? trunc &lt; prealloc</span></span><br><span class="line"><span class="comment"># falloc和trunc则需要文件系统和内核支持</span></span><br><span class="line"><span class="comment"># NTFS建议使用falloc, EXT3/4建议trunc, MAC 下需要注释此项</span></span><br><span class="line">file-allocation=trunc</span><br><span class="line"></span><br><span class="line"><span class="comment">## 进度保存相关 ##</span></span><br><span class="line"><span class="comment"># 从会话文件中读取下载任务</span></span><br><span class="line">input-file=/home/johnnychan/aria2/aria2.session</span><br><span class="line"><span class="comment"># 在Aria2退出时保存`错误/未完成`的下载任务到会话文件</span></span><br><span class="line">save-session=/home/johnnychan/aria2/aria2.session</span><br><span class="line"><span class="comment"># 定时保存会话, 0为退出时才保存, 需1.16.1以上版本, 默认:0</span></span><br><span class="line">save-session-interval=60</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载设置</span></span><br><span class="line"><span class="comment"># 最大同时下载任务数, 运行时可修改, 默认:5</span></span><br><span class="line">max-concurrent-downloads=10</span><br><span class="line"><span class="comment"># 同一服务器连接数, 添加时可指定, 默认:1</span></span><br><span class="line">max-connection-per-server=10</span><br><span class="line"><span class="comment"># 单个任务最大线程数, 添加时可指定, 默认:5</span></span><br><span class="line">split=5</span><br><span class="line"><span class="comment"># 整体下载速度限制, 运行时可修改, 默认:0</span></span><br><span class="line">max-overall-download-limit=0</span><br><span class="line"><span class="comment"># 单个任务下载速度限制, 默认:0</span></span><br><span class="line">max-download-limit=0</span><br><span class="line"><span class="comment"># 整体上传速度限制, 运行时可修改, 默认:0</span></span><br><span class="line"><span class="comment">#max-overall-upload-limit=500KB</span></span><br><span class="line"><span class="comment"># 单个任务上传速度限制, 默认:0</span></span><br><span class="line">max-upload-limit=0</span><br><span class="line"><span class="comment"># 禁用IPv6, 默认:false</span></span><br><span class="line"><span class="built_in">disable</span>-ipv6=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 最大重试次数, 设置为0表示不限制重试次数, 默认:5</span></span><br><span class="line">max-tries=5</span><br><span class="line"><span class="comment"># 设置重试等待的秒数, 默认:0</span></span><br><span class="line">retry-wait=0</span><br><span class="line"><span class="comment"># 假定size=10M, 文件为20MiB 则使用两个来源下载; 文件为15MiB 则使用一个来源下载</span></span><br><span class="line">min-split-size=10M</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># BitTorrent/Metalink 设置</span></span><br><span class="line"><span class="comment"># BitTorrent/Metalink 设置</span></span><br><span class="line"><span class="comment"># 当下载的是一个种子(以.torrent结尾)时, 自动开始BT任务, 默认:true</span></span><br><span class="line">follow-torrent=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 打开DHT功能, PT需要禁用, 默认:true</span></span><br><span class="line"><span class="built_in">enable</span>-dht=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 本地节点查找, PT需要禁用, 默认:true</span></span><br><span class="line">bt-enable-lpd=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 种子交换, PT需要禁用, 默认:true</span></span><br><span class="line"><span class="built_in">enable</span>-peer-exchange=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 种子最大打开文件数</span></span><br><span class="line">bt-max-open-files=16</span><br><span class="line"><span class="comment"># 单个种子最大连接数, 默认:55</span></span><br><span class="line">bt-max-peers=55</span><br><span class="line"><span class="comment"># DHT文件路径</span></span><br><span class="line">dht-file-path=/home/johnnychan/aria2/dht.dat</span><br><span class="line">dht-file-path6=/home/johnnychan/aria2/dht6.dat</span><br><span class="line"><span class="comment"># DHT文件监听端口，默认:6881-6999</span></span><br><span class="line">dht-listen-port=6881-6999</span><br><span class="line"><span class="comment"># 打开IPv6 DHT功能, PT需要禁用，默认false</span></span><br><span class="line"><span class="comment">#enable-dht6=false</span></span><br><span class="line"><span class="comment"># BT监听端口，当端口被屏蔽时使用, 默认:6881-6999</span></span><br><span class="line">listen-port=51413</span><br><span class="line"><span class="comment"># 种子分享率，默认1.0</span></span><br><span class="line">seed-ratio=1.0</span><br><span class="line"><span class="comment"># 种子分享时间，默认60分</span></span><br><span class="line">seed-time=60</span><br><span class="line"><span class="comment"># 额外Tracker服务器</span></span><br><span class="line">bt-tracker=udp://tracker.coppersurfer.tk:6969/announce,udp://tracker.open-internet.nl:6969/announce,udp://tracker.skyts.net:6969/announce,udp://tracker.piratepublic.com:1337/announce,udp://tracker.opentrackr.org:1337/announce,udp://9.rarbg.to:2710/announce,udp://retracker.coltel.ru:2710/announce,udp://pubt.in:2710/announce,udp://public.popcorn-tracker.org:6969/announce,udp://wambo.club:1337/announce,udp://tracker4.itzmx.com:2710/announce,udp://tracker1.wasabii.com.tw:6969/announce,udp://tracker.zer0day.to:1337/announce,udp://tracker.xku.tv:6969/announce,udp://tracker.vanitycore.co:6969/announce,udp://ipv4.tracker.harry.lu:80/announce,udp://inferno.demonoid.pw:3418/announce,udp://open.facedatabg.net:6969/announce,udp://mgtracker.org:6969/announce,udp://tracker.mg64.net:6969/announce,udp://tracker.tiny-vps.com:6969/announce,udp://tracker.internetwarriors.net:1337/announce,udp://tracker.grepler.com:6969/announce,udp://tracker.files.fm:6969/announce,udp://tracker.dler.org:6969/announce,udp://tracker.desu.sh:6969/announce,udp://tracker.cypherpunks.ru:6969/announce,udp://p4p.arenabg.com:1337/announce,udp://open.stealth.si:80/announce,udp://explodie.org:6969/announce,udp://bt.xxx-tracker.com:2710/announce,http://tracker.city9x.com:2710/announce,udp://tracker.tvunderground.org.ru:3218/announce,udp://tracker.torrent.eu.org:451/announce,udp://t.agx.co:61655/announce,udp://sd-95.allfon.net:2710/announce,udp://santost12.xyz:6969/announce,udp://sandrotracker.biz:1337/announce,udp://retracker.nts.su:2710/announce,udp://retracker.lanta-net.ru:2710/announce,http://retracker.mgts.by:80/announce,udp://tracker.uw0.xyz:6969/announce,http://tracker.skyts.net:6969/announce,udp://torr.ws:2710/announce,udp://thetracker.org:80/announce,http://retracker.telecom.by:80/announce,http://0d.kebhana.mx:443/announce,wss://tracker.openwebtorrent.com:443/announce,wss://tracker.fastcast.nz:443/announce,wss://tracker.btorrent.xyz:443/announce,ws://tracker.btsync.cf:2710/announce,udp://zephir.monocul.us:6969/announce,udp://tracker.martlet.tk:6969/announce,udp://tracker.kamigami.org:2710/announce,udp://tracker.cyberia.is:6969/announce,udp://tracker.bluefrog.pw:2710/announce,udp://tracker.acg.gg:2710/announce,udp://peerfect.org:6969/announce,https://evening-badlands-6215.herokuapp.com:443/announce,udp://z.crazyhd.com:2710/announce,udp://tracker.swateam.org.uk:2710/announce,udp://tracker.justseed.it:1337/announce,udp://packages.crunchbangplusplus.org:6969/announce,udp://104.238.198.186:8000/announce,https://open.kickasstracker.com:443/announce,http://tracker2.itzmx.com:6961/announce,http://tracker.vanitycore.co:6969/announce,http://tracker.torrentyorg.pl:80/announce,http://tracker.tfile.me:80/announce,http://tracker.mg64.net:6881/announce,http://tracker.electro-torrent.pl:80/announce,http://t.nyaatracker.com:80/announce,http://share.camoe.cn:8080/announce,http://servandroidkino.ru:80/announce,http://open.kickasstracker.com:80/announce,http://open.acgtracker.com:1096/announce,http://open.acgnxtracker.com:80/announce,http://mgtracker.org:6969/announce,http://fxtt.ru:80/announce,http://bt.dl1234.com:80/announce,http://agusiq-torrents.pl:6969/announce,http://104.238.198.186:8000/announce</span><br><span class="line"><span class="comment"># 客户端伪装</span></span><br><span class="line">peer-agent=uTorrent/2210(25130)</span><br><span class="line">peer-id-prefix=-UT2210-</span><br><span class="line"><span class="comment"># BT校验相关, 默认:true</span></span><br><span class="line"><span class="comment">#bt-hash-check-seed=true</span></span><br><span class="line"><span class="comment"># 继续之前的BT任务时, 无需再次校验, 默认:false</span></span><br><span class="line">bt-seed-unverified=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 保存磁力链接元数据为种子文件(.torrent文件), 默认:false</span></span><br><span class="line">bt-save-metadata=<span class="literal">true</span></span><br><span class="line"><span class="comment">#下载完成后删除.ara2的同名文件</span></span><br><span class="line">on-download-complete=/home/johnnychan/aria2/delete_aria2</span><br><span class="line"></span><br><span class="line"><span class="comment"># RPC 设置</span></span><br><span class="line"><span class="comment"># 启用RPC, 默认:false</span></span><br><span class="line"><span class="built_in">enable</span>-rpc=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 允许所有来源, 默认:false</span></span><br><span class="line">rpc-allow-origin-all=<span class="literal">true</span></span><br><span class="line"><span class="comment"># RPC证书</span></span><br><span class="line"><span class="comment">#rpc-certificate=/opt/var/aria2/aria2.pfx</span></span><br><span class="line"><span class="comment"># 允许非外部访问, 默认:false</span></span><br><span class="line">rpc-listen-all=<span class="literal">true</span></span><br><span class="line"><span class="comment"># RPC监听端口, 端口被占用时可以修改, 默认:6800</span></span><br><span class="line">rpc-listen-port=6800</span><br><span class="line"><span class="comment"># 设置的RPC授权令牌, v1.18.4新增功能, 取代 --rpc-user 和 --rpc-passwd 选项</span></span><br><span class="line">rpc-secret=faketoken</span><br><span class="line"><span class="comment"># 启用加密后 RPC 服务需要使用 https 或者 wss 协议连接</span></span><br><span class="line"><span class="comment">#rpc-secure=true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 高级设置</span></span><br><span class="line"><span class="comment"># 进程守护</span></span><br><span class="line">daemon=<span class="literal">true</span></span><br><span class="line"><span class="comment">#enable-mmap=true</span></span><br><span class="line"><span class="comment"># 强制保存会话, 即使任务已经完成, 默认:false</span></span><br><span class="line"><span class="comment"># 较新的版本开启后会在任务完成后依然保留.aria2文件</span></span><br><span class="line">force-save=<span class="literal">true</span></span><br><span class="line"><span class="comment"># 整体下载速度限制, 运行时可修改, 默认:0</span></span><br><span class="line">max-overall-download-limit=0</span><br></pre></td></tr></table></figure>
+
+<h5 id="配置后台守护运行："><a href="#配置后台守护运行：" class="headerlink" title="配置后台守护运行："></a>配置后台守护运行：</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/systemd/user/aria2.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Aria2c download manager</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=&lt;你的用户名&gt;</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/bin/aria2c --conf-path=/home/johnnychan/aria2/aria2.conf -D</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> aria2</span><br><span class="line">sudo systemctl start aria2</span><br></pre></td></tr></table></figure>
+
+<h4 id="uGet"><a href="#uGet" class="headerlink" title="uGet"></a>uGet</h4><p>强大的下载软件，比迅雷更强，推荐搭配 aria2 使用<br>uGet 使用 aria2：编辑 &gt; 设置 &gt; 插件 &gt; 插件匹配顺序：aria2; URI:<a href="http://localhost:6800/jsonrpc" target="_blank" rel="noopener">http://localhost:6800/jsonrpc</a><br>参数：–enable-rpc=true -D –disable-ipv6 –check-certificate=false<br>chrome,firefox启用 uget 下载</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S uget-intedrator</span><br><span class="line">sudo pacman -S uget-intedrator-chrome</span><br><span class="line">sudo pacman -S uget-intedrator-firefox</span><br></pre></td></tr></table></figure>
+
+<h4 id="蓝牙使用"><a href="#蓝牙使用" class="headerlink" title="蓝牙使用"></a>蓝牙使用</h4><p>安装软件包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S bluez bluez-utils pulseaudio-bluetooth pulseaudio-alsa <span class="comment">#安装蓝牙模块需要的软件</span></span><br></pre></td></tr></table></figure>
+<p>确保未禁用蓝牙</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rfkill <span class="comment">#查看TYPE类型是bluetooth的是否是unblocked</span></span><br><span class="line">rfkill unblock 0 <span class="comment">#取消阻止</span></span><br></pre></td></tr></table></figure>
+<p>启动蓝牙服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> bluetooth</span><br><span class="line">sudo systemctl start bluetooth</span><br></pre></td></tr></table></figure>
+<p>打开<code>系统设置-&gt;蓝牙&gt;适配器</code>看是否能识别适配器,如果不能识别则需要更换蓝牙适配器。能识别的话再继续下一步，可以直接系统设置中点击连接，也可以终端启动bluetoothctl交互命令。<br>使用bluetoothctl连接到蓝牙设备：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bluetoothctl</span><br><span class="line">[bluetooth]<span class="comment">#power on #打开控制器电源，默认是关闭的。</span></span><br><span class="line">[bluetooth]<span class="comment">#devices #获取要配对设备的 MAC 地址</span></span><br><span class="line">[bluetooth]<span class="comment">#scan on #进行扫描以检测你的蓝牙设备</span></span><br><span class="line">[bluetooth]<span class="comment">#pair $MAC #开始配对,MAC地址(支持 tab 键补全)</span></span><br><span class="line">[bluetooth]<span class="comment">#trust $MAC #再次连接可能需要手工认，所以需要这句命令</span></span><br><span class="line">[bluetooth]<span class="comment">#connect $MAC #连接到设备</span></span><br><span class="line">[JBL Reflect Mini2]<span class="comment"># info #以下是输出信息</span></span><br><span class="line">Device F8:DF:15:40:E3:C3 (public)</span><br><span class="line">        Name: JBL Reflect Mini2</span><br><span class="line">        Alias: JBL Reflect Mini2</span><br><span class="line">        Class: 0x00240404</span><br><span class="line">        Icon: audio-card</span><br><span class="line">        Paired: yes</span><br><span class="line">        Trusted: yes</span><br><span class="line">        Blocked: no</span><br><span class="line">        Connected: yes</span><br><span class="line">        LegacyPairing: no</span><br><span class="line">        UUID: Audio Sink                (0000110b-0000-1000-8000-00805f9b34fb)</span><br><span class="line">        UUID: A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)</span><br><span class="line">        UUID: A/V Remote Control        (0000110e-0000-1000-8000-00805f9b34fb)</span><br><span class="line">        UUID: Handsfree                 (0000111e-0000-1000-8000-00805f9b34fb)</span><br><span class="line">        RSSI: -55</span><br></pre></td></tr></table></figure>
+
+<h4 id="系统信息查看软件-类似AIDA64"><a href="#系统信息查看软件-类似AIDA64" class="headerlink" title="系统信息查看软件(类似AIDA64)"></a>系统信息查看软件(类似AIDA64)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yay -S hardinfo</span><br></pre></td></tr></table></figure>
+
+<h4 id="SSD优化配置"><a href="#SSD优化配置" class="headerlink" title="SSD优化配置"></a>SSD优化配置</h4><h5 id="开启Trim功能"><a href="#开启Trim功能" class="headerlink" title="开启Trim功能"></a>开启Trim功能</h5><p>SSD TRIM是一个高级技术附件(ATA)命令，它使操作系统能够通知NAND闪存固态硬盘(SSD)哪些数据块可以删除，因为它们已经不再使用了。使用TRIM可以提高向SSD写入数据的性能，延长SSD的使用寿命。可以参考<a href="https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM" target="_blank" rel="noopener">ArchWiki</a>,<br>在使用Trim功能之前需要查看固态硬盘是否支持，否则可能造成数据丢失:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ lsblk --discard</span><br></pre></td></tr></table></figure>
+<p><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_manjaro_ssd_io_check.webp" alt=""><br><code>DISC-GRAN</code>和<code>DISC-MAX</code>关于使用的Trim方式，Nvme 协议固态是不推荐使用的<code>ContinuousTRIM</code>方式的。(详见<a href="https://wiki.archlinux.org/index.php/Solid_state_drive/NVMe#Discards" target="_blank" rel="noopener">ArchWiki</a>)<br>所以使用的定期执行fstrim的方式，即添加一个定时任务或服务让其自动执行，如每周执行一次trim操作。 参考<a href="https://wiki.archlinux.org/index.php/Solid_state_drive#Periodic_TRIM" target="_blank" rel="noopener">PeriodicTRIM</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> fstrim.timer</span><br><span class="line">sudo systemctl start fstrim.timer <span class="comment">#开启fstrim</span></span><br></pre></td></tr></table></figure>
+<p>启用fstrim.timer服务则会自动每周运行一次fstrim.service去进行trim,不用手动调用。</p>
+<h5 id="IO调度器选择"><a href="#IO调度器选择" class="headerlink" title="IO调度器选择"></a>IO调度器选择</h5><p>一般来说，IO调度算法是为低速硬盘准备的，对于固态，最好是不使用任何IO调度器，或使用对硬盘干预程度最低的调度算法。这里可以照搬官方的<a href="https://wiki.archlinux.org/index.php/Improving_performance#Storage_devices" target="_blank" rel="noopener">配置</a></p>
+<figure class="highlight bash"><figcaption><span>:/etc/udev/rules.d/60-schedulers.rules</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># set scheduler for NVMe</span></span><br><span class="line">ACTION==<span class="string">"add|change"</span>, KERNEL==<span class="string">"nvme[0-9]*"</span>, ATTR&#123;queue/scheduler&#125;=<span class="string">"none"</span></span><br><span class="line"><span class="comment"># set scheduler for SSD and eMMC</span></span><br><span class="line">ACTION==<span class="string">"add|change"</span>, KERNEL==<span class="string">"sd[a-z]|mmcblk[0-9]*"</span>, ATTR&#123;queue/rotational&#125;==<span class="string">"0"</span>, ATTR&#123;queue/scheduler&#125;=<span class="string">"mq-deadline"</span></span><br><span class="line"><span class="comment"># set scheduler for rotating disks</span></span><br><span class="line">ACTION==<span class="string">"add|change"</span>, KERNEL==<span class="string">"sd[a-z]"</span>, ATTR&#123;queue/rotational&#125;==<span class="string">"1"</span>, ATTR&#123;queue/scheduler&#125;=<span class="string">"bfq"</span></span><br></pre></td></tr></table></figure>
+<p>然后重启电脑永久生效，再查看当前固态的IO调度器:<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_manajro_ssd_io.webp" alt=""><br>可以看到我当前NVME盘没有使用任何调度器，SATA固态使用的是deadline，而机械硬盘使用的是bfq。</p>
+<h4 id="提取图片文字Tesseract"><a href="#提取图片文字Tesseract" class="headerlink" title="提取图片文字Tesseract"></a>提取图片文字Tesseract</h4><h5 id="Tesseract概述"><a href="#Tesseract概述" class="headerlink" title="Tesseract概述"></a>Tesseract概述</h5><p>Tesseract 是一款被广泛使用的开源 OCR 工具,Tesseract(/‘tesərækt/) 这个词的意思是”超立方体”，指的是几何学里的四维标准方体，又称”正八胞体”。。不过这里要讲的，是一款以其命名的开源 OCR(Optical Character Recognition, 光学字符识别) 软件。<br>所谓 OCR 是图像识别领域中的一个子领域，该领域专注于对图片中的文字信息进行识别并转换成能被常规文本编辑器编辑的文本。<br>Tesseract 已经有 30 年历史，开始它是惠普实验室的一款专利软件，然后在 2005 年开源，自 2006 年后由 Google 赞助进行后续的开发和维护。<br>在 1995 年 Tesseract 曾是世界前三的 OCR 引擎，而且在现在的免费 OCR 引擎中，其识别精度也仍然是出类拔萃的。因为其免费与较好的效果，许多的个人开发者以及一些较小的团队在使用着 Tesseract ，诸如验证码识别、车牌号识别等应用中，不难见到 Tesseract 的身影。<br><a href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener">Tesseract</a>目前已作为开源项目发布在GitHub上，其最新版本已经支持中文OCR，并提供了一个命令行工具。</p>
+<h5 id="Tesseract安装"><a href="#Tesseract安装" class="headerlink" title="Tesseract安装"></a>Tesseract安装</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S tesseract</span><br><span class="line"></span><br><span class="line">$ tesseract -v                     </span><br><span class="line">tesseract 4.1.1</span><br><span class="line"> leptonica-1.79.0</span><br><span class="line">  libgif 5.2.1 : libjpeg 8d (libjpeg-turbo 2.0.4) : libpng 1.6.37 : libtiff 4.1.0 : zlib 1.2.11 : libwebp 1.1.0</span><br><span class="line"> Found AVX2</span><br><span class="line"> Found AVX</span><br><span class="line"> Found FMA</span><br><span class="line"> Found SSE</span><br><span class="line"> Found libarchive 3.4.2 zlib/1.2.11 liblzma/5.2.4 bz2lib/1.0.8 liblz4/1.9.2 libzstd/1.4.4</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装语言文件"><a href="#安装语言文件" class="headerlink" title="安装语言文件"></a>安装语言文件</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S tesseract-data-chi_sim <span class="comment">#简体中文</span></span><br><span class="line">$ sudo pacman -S tesseract-data-chi_tra <span class="comment">#繁体中文</span></span><br><span class="line">$ sudo pacman -S tesseract-data-eng <span class="comment">#英文</span></span><br><span class="line"></span><br><span class="line">$ tesseract --list-langs <span class="comment">#查看有哪些可用的语言   </span></span><br><span class="line">List of available languages (3):</span><br><span class="line">chi_sim</span><br><span class="line">chi_tra</span><br><span class="line">eng</span><br><span class="line">osd</span><br></pre></td></tr></table></figure>
+<p>这里的 “eng” 和 “chi_sim”，”chi_tra”是 Tesseract 提供的英文，简体中文和繁体中文的语言文件，而其他的则是训练得到的。<br>另外要说明的是，这里的 “语言文件” 的本质是包含了某种 “自然语言” 的文字的特征等辅助识别的一些资源，但像 chi_sim 这个中文简体里也包含了英文字母与阿拉伯数字的资源。而我们也可以为了特定的用途而去训练产生对应的资源。</p>
+<h5 id="命令行测试"><a href="#命令行测试" class="headerlink" title="命令行测试"></a>命令行测试</h5><p>假设我们有一张名为 paper.png 的图片，则通过以下命令对图片进行识别</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tesseract paper.png result -l chi_sim</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>第一个参数是待识别的图像的文件名</p>
+</li>
+<li><p>第二个参数用于指定输出，如果希望直接输出而不是保存到文件，那么就使用 stdout，否则这个参数将会作为保存结果的文件的前缀</p>
+</li>
+<li><p>-l chi_sim 这个应该很好理解，就是用来指定使用哪个 “语言文件”，如果是使用 英文(eng) ，这个参数可以不加，因为默认就是使用英文的 “语言文件” 来进行识别<br>以上命令如不出错，结果将会保存到 result.txt 这个文本文件中。<br>此外 Tesseract 还提供非常丰富的可选参数来对识别过程进行调整，可用的参数及其默认值可以通过以下命令进行查看:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tesseract --<span class="built_in">print</span>-parameters</span><br></pre></td></tr></table></figure>
+<p>参数的使用有两种:</p>
+</li>
+<li><p>使用 -c 选项来设定单项参数的值，比如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tesseract paper.png result -l chi_sim -c language_model_ngram_on=1</span><br></pre></td></tr></table></figure>
+<p>允许使用多个 -c 选项来设置多个参数的值。</p>
+</li>
+<li><p>将多项参数设置写入文件，然后在识别时使用该文件，比如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tesseract paper.png result -l chi_sim tess.conf</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，如果使用配置文件，用作参数的配置文件名要放在最后面——这里也支持多个配置文件，但它们必须要在最后面。假如我有两个配置文件 tess_1.conf 和 tess_2.conf，那么这样是正确的:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tesseract paper.png paper -l chi_sim tess_1.conf tess_2.conf</span><br></pre></td></tr></table></figure>
+<p>而这样则是错误的:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tesseract paper.png paper tess_1.conf -l chi_sim tess_2.conf</span><br></pre></td></tr></table></figure>
+<p>至于 Tesseract 其他那些参数各有什么含义，官方没有提供任何文档来进行解释，这里有一个<a href="http://www.sk-spell.sk.cx/tesseract-ocr-parameters-in-302-version" target="_blank" rel="noopener">链接</a>提供了部分参数的用处说明，应该是阅读了 Tesseract 源代码后得到的结论。</p>
+</li>
+</ul>
+<h5 id="Tesseract可视化界面"><a href="#Tesseract可视化界面" class="headerlink" title="Tesseract可视化界面"></a>Tesseract可视化界面</h5><p>根据不同的GUI安装相应支持的Tesseract软件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S gimagereader-qt <span class="comment">#QT</span></span><br><span class="line">$ sudo pacman -S gimagereader-gtk <span class="comment">#GTK</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="开发软件"><a href="#开发软件" class="headerlink" title="开发软件"></a>开发软件</h3><h4 id="网络工具"><a href="#网络工具" class="headerlink" title="网络工具"></a>网络工具</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S wireshark-qt  <span class="comment"># 抓包工具</span></span><br><span class="line"></span><br><span class="line">$ sudo pacman -S <span class="built_in">bind</span>-tools <span class="comment">#Dig（Domain Information Groper）是一个功能强大的命令行工具，用于查询DNS名称服务器</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="jdk"><a href="#jdk" class="headerlink" title="jdk"></a>jdk</h4><p>手动安装oracle-jdk，可选择低版本,下载tar包<br>解压</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf xxx.tar.gz</span><br></pre></td></tr></table></figure>
+<p>移动到 <code>/usr/src</code>目录下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mv xxx /usr/src/</span><br></pre></td></tr></table></figure>
+<p>先试一下前面这个，不行再加上后面那个</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>在后面加上， 地址根据jdk修改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/home/johnnychan/Public/programs/java/jdk8/jdk1.8.0_241</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<p>启用配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> .bashrc</span><br></pre></td></tr></table></figure>
+<p>查看是否配置成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>显示</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java version <span class="string">"1.8.0_241"</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_241-b07)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)</span><br></pre></td></tr></table></figure>
+<p>前面那个不行在加上底下这个配置jdk环境变量<br>修改配置文件<code>/etc/profile</code><br>setting for jdk-oracle</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">JAVA_HOME=/home/johnnychan/Public/programs/java/jdk8/jdk1.8.0_241</span><br><span class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib/tools.jar:<span class="variable">$JAVA_HOME</span>/lib/dt.jar</span><br><span class="line">PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME CLASSPATH PATH</span><br></pre></td></tr></table></figure>
+<p>启用配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h4 id="Tomcat安裝配置"><a href="#Tomcat安裝配置" class="headerlink" title="Tomcat安裝配置"></a>Tomcat安裝配置</h4><p>到<a href="https://tomcat.apache.org/" target="_blank" rel="noopener">Tomcat官网</a>选择相应版本的tar.gz包下载</p>
+<p>解压并移动到opt目录下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -zxvf apache-tomcat-8.5.53.tar.gz</span><br><span class="line">sudo cp -r apache-tomcat-8.5.53 /opt/</span><br></pre></td></tr></table></figure>
+<p>发现没有读写查权限，于是开放tomcat及其子目录的权限，-R表示启动递归处理</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo chmod -R 755 /opt/apache-tomcat-8.5.53</span><br></pre></td></tr></table></figure>
+<p>启动Tomcat</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /opt/apache-tomcat-8.5.53/bin/startup.sh</span><br></pre></td></tr></table></figure>
+<p>会看到控制台有以下输出：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Using CATALINA_BASE:   /opt/apache-tomcat-8.5.53</span><br><span class="line">Using CATALINA_HOME:   /opt/apache-tomcat-8.5.53</span><br><span class="line">Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.53/temp</span><br><span class="line">Using JRE_HOME:        /home/johnnychan/Public/programs/java/jdk8/jdk1.8.0_241/jre</span><br><span class="line">Using CLASSPATH:       /opt/apache-tomcat-8.5.53/bin/bootstrap.jar:/opt/apache-tomcat-8.5.53/bin/tomcat-juli.jar</span><br><span class="line">Tomcat started.</span><br></pre></td></tr></table></figure>
+<p>在浏览器地址栏输入<a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> 出现了那幅经典的猫图,成功。</p>
+<p>Tomcat 默认运行在8080端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo netstat -anpt |grep :8080</span><br><span class="line">tcp        0      0 :::8080                     :::*                        LISTEN      3318/java</span><br></pre></td></tr></table></figure>
+<p>关闭Tomcat</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo /opt/apache-tomcat-8.5.53/bin/shutdown.sh</span><br><span class="line">或者直接<span class="built_in">kill</span>进程号,例如:</span><br><span class="line">$ sudo <span class="built_in">kill</span> -9 3318</span><br></pre></td></tr></table></figure>
+
+<p>为了以后方便启动tomcat 可设置软链接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo ln  -s /opt/apache-tomcat-8.5.53/bin/startup.sh  /usr/bin/tomcatup</span><br><span class="line">sudo ln  -s /opt/apache-tomcat-8.5.53/bin/shutdown.sh  /usr/bin/tomcatdown</span><br></pre></td></tr></table></figure>
+<p>以后直接使用 sudo tomcatup 和sudo tomcatup即可。</p>
+<h4 id="Maven安裝配置"><a href="#Maven安裝配置" class="headerlink" title="Maven安裝配置"></a>Maven安裝配置</h4><p>在/usr/local/lib 目录下新建一个文件夹maven：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir /usr/<span class="built_in">local</span>/lib/maven</span><br></pre></td></tr></table></figure>
+<p>将文件解压到这个目录下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tar -zxvf apache-maven-3.6.3-bin.tar.gz -C  /usr/<span class="built_in">local</span>/lib/maven</span><br></pre></td></tr></table></figure>
+<p>也可以放到别的路径下，可以看一下linux目录一般存放规则：<a href="http://blog.csdn.net/fuzhongyu2/article/details/52437161" target="_blank" rel="noopener">http://blog.csdn.net/fuzhongyu2/article/details/52437161</a><br>配置环境变量<br>环境变量分为用户变量和系统变量。<br>用户变量配置文件：~/.bashrc（在当前用户主目录下的隐藏文件，可以通过<code>ls -a</code>查看到)<br>系统环境配置文件：/etc/profile<br>用户变量和系统变量的配置方法一样，本文以配置用户变量为例。<br>编译配置文件.bashrc:<br>在终端输入:  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo nano ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>在打开的文档末输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> MAVEN_HOME=/usr/<span class="built_in">local</span>/lib/maven/apache-maven-3.6.3</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;MAVEN_HOME&#125;</span>/bin:<span class="variable">$&#123;PATH&#125;</span></span><br></pre></td></tr></table></figure>
+<p>点击保存，这样maven环境变量就配置好了。<br>执行命令:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span>  ~/.bashrc</span><br><span class="line"><span class="built_in">source</span>  /etc/profile</span><br></pre></td></tr></table></figure>
+<p>测试是否安装成功<br>输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
+<p>如果出现下列字样，则安装成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)</span><br><span class="line">Maven home: /usr/<span class="built_in">local</span>/lib/maven/apache-maven-3.6.3</span><br><span class="line">Java version: 1.8.0_241, vendor: Oracle Corporation,runtime:/home/johnnychan/Public/programs/java/jdk8/jdk1.8.0_241/jre</span><br><span class="line">Default locale: zh_CN, platform encoding: UTF-8</span><br><span class="line">OS name: <span class="string">"linux"</span>, version: <span class="string">"5.4.13-3-manjaro"</span>, arch: <span class="string">"amd64"</span>, family: <span class="string">"unix"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S git</span><br></pre></td></tr></table></figure>
+
+<h4 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S vim</span><br></pre></td></tr></table></figure>
+<h5 id="Vim右键不能粘贴的解决办法"><a href="#Vim右键不能粘贴的解决办法" class="headerlink" title="Vim右键不能粘贴的解决办法"></a>Vim右键不能粘贴的解决办法</h5><p>修改/usr/share/vim/vim81/defaults.vim文件，不同发行版位置可能位置不一样，</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /usr/ -<span class="built_in">type</span> f -name <span class="string">'defaults.vim'</span></span><br></pre></td></tr></table></figure>
+<p>发现我的是/usr/share/vim/vim81/defaults.vim这个文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /usr/share/vim/vim81/defaults.vim</span><br></pre></td></tr></table></figure>
+<p>大概在第70多行的地方:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> has(<span class="string">'mouse'</span>)</span><br><span class="line">  <span class="built_in">set</span> mouse=a</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+<p>把set mouse=a修改为set mouse-=a</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> has(<span class="string">'mouse'</span>)</span><br><span class="line">  <span class="built_in">set</span> mouse-=a</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+<p>:wq保存退出即可。</p>
+<h4 id="Markdown编辑器"><a href="#Markdown编辑器" class="headerlink" title="Markdown编辑器"></a>Markdown编辑器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S typora</span><br></pre></td></tr></table></figure>
+
+<h4 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S visual-studio-code-bin</span><br></pre></td></tr></table></figure>
+
+<h4 id="REST工具"><a href="#REST工具" class="headerlink" title="REST工具"></a>REST工具</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S postman-bin</span><br></pre></td></tr></table></figure>
+
+<h4 id="GIT管理工具"><a href="#GIT管理工具" class="headerlink" title="GIT管理工具"></a>GIT管理工具</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S gitkraken</span><br></pre></td></tr></table></figure>
+
+<h4 id="idea-JAVA-IDE"><a href="#idea-JAVA-IDE" class="headerlink" title="idea(JAVA IDE)"></a>idea(JAVA IDE)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S intellij-idea-ultimate-edition</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据库管理工具"><a href="#数据库管理工具" class="headerlink" title="数据库管理工具"></a>数据库管理工具</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S datagrip</span><br><span class="line">sudo pacman -S dbeaver</span><br></pre></td></tr></table></figure>
+
+<h4 id="离线API文档管理"><a href="#离线API文档管理" class="headerlink" title="离线API文档管理"></a>离线API文档管理</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S zeal</span><br></pre></td></tr></table></figure>
+
+<h4 id="NodeJS与NPM"><a href="#NodeJS与NPM" class="headerlink" title="NodeJS与NPM"></a>NodeJS与NPM</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/</span><br><span class="line">sudo mkdir node</span><br><span class="line"><span class="built_in">cd</span> node</span><br><span class="line"><span class="comment">#下载&amp;解压</span></span><br><span class="line">sudo wget https://nodejs.org/dist/v12.14.1/node-v12.14.1-linux-x64.tar.xz &amp;&amp; sudo tar   zxvf node-v12.14.1-linux-x64.tar.xz</span><br><span class="line"><span class="comment">#设置全局</span></span><br><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br><span class="line"><span class="comment">#安装cnpm</span></span><br><span class="line">sudo npm install -g cnpm --registry=https://registry.npm.taobao.org  </span><br><span class="line"><span class="comment">#设置全局</span></span><br><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/bin/cnpm /usr/<span class="built_in">local</span>/bin/cnpm</span><br></pre></td></tr></table></figure>
+<p>然后查看版本信息</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v12.14.1</span><br><span class="line">$ npm -v</span><br><span class="line">6.13.4</span><br><span class="line">$ cnpm -v</span><br><span class="line">cnpm@6.1.1 (/usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/lib/node_modules/cnpm/lib/parse_argv.js)</span><br><span class="line">npm@6.13.6 (/usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/lib/node_modules/cnpm/node_modules/npm/lib/npm.js)</span><br><span class="line">node@12.14.1 (/usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/bin/node)</span><br><span class="line">npminstall@3.27.0 (/usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/lib/node_modules/cnpm/node_modules/npminstall/lib/index.js)</span><br><span class="line">prefix=/usr/<span class="built_in">local</span>/node/node-v12.14.1-linux-x64/node_global </span><br><span class="line">linux x64 5.4.13-3-MANJARO </span><br><span class="line">registry=https://r.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h5 id="npm全局模块路径的设置"><a href="#npm全局模块路径的设置" class="headerlink" title="npm全局模块路径的设置"></a>npm全局模块路径的设置</h5><p>设置全局模块的存放路径和cache路径。例如我希望将以上两个文件夹放在nodejs内（不要问我为什么，因为我希望以后在别的电脑上配置起来简单，不用每次都去获取各个模块），便在nodejs目录下新建”node_global”和”node_cache”两个文件夹。<br>在终端输入下面两行命令:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">"/usr/local/node/node-v12.14.1-linux-x64/node_global"</span></span><br><span class="line">npm config <span class="built_in">set</span> cache <span class="string">"/usr/local/node/node-v12.14.1-linux-x64/node_cache"</span></span><br></pre></td></tr></table></figure>
+<p>接下来，安装一个模块试试，例如vue，这里直接在终端输入npm install vue -g（-g就是全局安装模块的意思，就是将vue模块安装到你修改后的模块存放路径/usr/local/node/node-v12.14.1-linux-x64/node_global），等待下载安装。</p>
+<h4 id="阿里云OSS"><a href="#阿里云OSS" class="headerlink" title="阿里云OSS"></a>阿里云OSS</h4><p>阿里云<a href="https://github.com//oss-browser" target="_blank" rel="noopener">OSS客户端</a>: 点击下载：<a href="https://oss.chenjunxin.com/files/oss-browser-linux_64_1.9.5.zip" target="_blank" rel="noopener">oss-browser-linux_64_1.9.5</a>,解压到目录，运行<code>oss-browser</code>即可。<br>若出现：<code>./oss-browser: error while loading shared libraries: libgconf-2.so.4: cannot open shared object file: No such file or directory</code>,<br>解决：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S gconf</span><br></pre></td></tr></table></figure>
+
+<h4 id="Docker与Docker-Compose"><a href="#Docker与Docker-Compose" class="headerlink" title="Docker与Docker-Compose"></a>Docker与Docker-Compose</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S docker docker-compose</span><br></pre></td></tr></table></figure>
+<p>设置普通用户使用 Docker 不需要使用 sudo</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo groupadd docker</span><br></pre></td></tr></table></figure>
+<p>启动docker服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>查看docker服务的状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl status docker</span><br></pre></td></tr></table></figure>
+
+<p>设置docker开机启动服务</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="builtin-name">enable</span> docker</span><br></pre></td></tr></table></figure>
+
+<p>干掉讨厌的 sudo,如果还没有 docker group 就添加一个</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo groupadd docker</span><br></pre></td></tr></table></figure>
+<p>将自己的登录名(${USER} )加入该 group 内，然后退出并重新登录就生效了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gpasswd -a <span class="variable">$&#123;USER&#125;</span> docker</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure>
+<p>重启 docker 服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+<p>切换当前会话到新 group 或者重启 X 会话<br>注意，这一步是必须的，否则因为 groups 命令获取到的是缓存的组信息，刚添加的组信息未能生效，所以 docker images 执行时同样有错。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">newgrp - docker</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkill X</span><br></pre></td></tr></table></figure>
+<p>使用中国官方镜像加速:<br>为了永久性保留更改，我们可以修改 /etc/docker/daemon.json 文件并添加上 registry-mirrors 键值。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">"registry-mirrors"</span>: [<span class="string">"https://registry.docker-cn.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改保存后重启 Docker 以使配置生效。</p>
+<h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S nginx</span><br><span class="line">systemctl start nginx <span class="comment">#启动Nginx服务</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nginx <span class="comment">#Nginx服务开机时启动</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a> 的默认页面是:/usr/share/nginx/html/index.html,你可以修改在 /etc/nginx/ 目录中的文件来更改配置 ./etc/nginx/nginx.conf 是主配置文件。</p>
+<h5 id="Nginx配置下载目录"><a href="#Nginx配置下载目录" class="headerlink" title="Nginx配置下载目录"></a>Nginx配置下载目录</h5><p>在原有nginx配置中增加location模块，对127.0.0.1访问路径设置为下载目录根目录/home/johnnychan/Downloads/ThunderDownloads,并且对该location块开启目录文件列表，详细配置如下：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">root            /home/johnnychan/Downloads/ThunderDownloads;</span><br><span class="line">autoindex on;  # 开启目录文件列表</span><br><span class="line">autoindex_exact_size on;  # 显示出文件的确切大小，单位是bytes</span><br><span class="line">autoindex_localtime on;  # 显示的文件时间为文件的服务器时间</span><br><span class="line">charset utf-8,gbk;  # 避免中文乱码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Nginx的403-Forbidden解决的办法-权限文件和文件不存在"><a href="#Nginx的403-Forbidden解决的办法-权限文件和文件不存在" class="headerlink" title="Nginx的403 Forbidden解决的办法(权限文件和文件不存在)"></a>Nginx的403 Forbidden解决的办法(权限文件和文件不存在)</h5><p>要修改nginx运行用户为拥有配置的root路径拥有权限的用户，或者修改目录的权限。在/etc/nginx/nginx.conf 前面加上一句：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">user xxx;</span><br></pre></td></tr></table></figure>
+<p>就可以了，其中，xxx就是运行nginx的用户。<br>完成了上面的，访问还出现错误，很有可能是你的目录里没有文件，然后又没有列出目录的权限。<br>检查你的/home/xxx/website/nginxweb文件夹里面是否有配置的默认文件，默认文件在nginx.conf里面的index，或者使用上面的方法生成文件索引。</p>
+<h3 id="终端软件"><a href="#终端软件" class="headerlink" title="终端软件"></a>终端软件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S neofetch <span class="comment"># 终端打印出你的系统信息</span></span><br><span class="line">sudo pacman -S htop <span class="comment">#命令行显示进程信息</span></span><br><span class="line">sudo pacman -S bashtop <span class="comment">#终端Linux资源监控器</span></span><br><span class="line">sudo pacman -S yakuake <span class="comment"># 堪称 KDE 下的终端神器，KDE 已经自带，F12 可以唤醒</span></span><br><span class="line">sudo pacman -S net-tools <span class="comment"># 这样可以使用 ifconfig 和 netstat</span></span><br><span class="line">yay -S tree</span><br><span class="line">yay -S qrcp <span class="comment">#电脑手机通过wifi互传文件工具</span></span><br></pre></td></tr></table></figure>
+<p>上述工具中<a href="https://github.com/aristocratos/bashtop" target="_blank" rel="noopener">bashtop</a>和<a href="https://github.com/claudiodangelis/qrcp" target="_blank" rel="noopener">qrcp</a>是<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>上的开源项目。</p>
+<h4 id="ZSH和Oh-my-zsh"><a href="#ZSH和Oh-my-zsh" class="headerlink" title="ZSH和Oh-my-zsh"></a>ZSH和Oh-my-zsh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S zsh</span><br></pre></td></tr></table></figure>
+<p>接着配置oh-my-zsh：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c“$（curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh）”</span><br></pre></td></tr></table></figure>
+<p>查看本地有哪些shell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
+<p>最后更换默认的shell为zsh：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure>
+
+<h4 id="更改zsh主题"><a href="#更改zsh主题" class="headerlink" title="更改zsh主题"></a>更改zsh主题</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>修改配置文件中的 “ ZSH_THEME “,例如设置为随机主题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ZSH_THEME  = <span class="string">"random"</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="设置为powerlevel10k主题"><a href="#设置为powerlevel10k主题" class="headerlink" title="设置为powerlevel10k主题"></a>设置为powerlevel10k主题</h5><p>推荐使用<a href="https://github.com/romkatv/powerlevel10k" target="_blank" rel="noopener">powerlevel10k</a>主题,兼容powerlevel9k，10-100倍的性能提升。<br>由于使用的是Oh My Zsh，所以只需要将 github 上的 repo 下载到 Oh My Zsh 的目录下然后配置即可。  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后设置 .zshrc 中的变量 ZSH_THEME</span></span><br><span class="line">ZSH_THEME=<span class="string">"powerlevel10k/powerlevel10k"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h4><p>安装完 powerlevel10k 后你可能会发现有乱码，这是因为你终端字体不支持那么多的字符，这就需要使用扩展字体了。<br>字体的安装，我们可以参考 <a href="https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#step-2-install-a-powerline-font" target="_blank" rel="noopener">powerlevel9k 的官方介绍</a>：<br>安装 powerline 字体有四种方式：</p>
+<ul>
+<li>Option 1: Install Powerline Fonts 请看官方文档</li>
+<li>Option 2: Use a Programmer Font 请看官方文档</li>
+<li>Option 3: Install Awesome-Powerline Fonts 请看官方文档</li>
+<li>Option 4: Install Nerd-Fonts:Nerd 字体应该是支持字形最多的，所以不用多想，安装它就好了。</li>
+</ul>
+<p>GitHub 上有<a href="https://github.com/ryanoasis/nerd-fonts#font-installation" target="_blank" rel="noopener">Nerd-Fonts详细的安装介绍文档</a><br>可以直接 <a href="https://www.nerdfonts.com/" target="_blank" rel="noopener">nerdfonts官网</a>，找到Downloads，直接下载 Hack 字体，，直接双击安装下载的字体即可，然后修改 oh my zsh 的变量文件 ~/.zshrc，在设置主题的配置前添加一行设置：</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="addition">+ POWERLEVEL9K_MODE='nerdfont-complete'</span></span><br><span class="line">ZSH_THEME="powerlevel10k/powerlevel10k"</span><br></pre></td></tr></table></figure>
+<p>ArchLinux下可以运行命令安装:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pacman -S nerd-fonts-hack</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>zsh安装powerlevel10k主题后启动终端会让用户选择各种配置，之后生成相应的配置文件，并在<del>/.zshrc文件中加入运行该主题自定义配置文件的命令<code>[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh</code>，会在其中看到已经配置了主题的字体<code>typeset -g POWERLEVEL9K_MODE=nerdfont-complete</code>，因此在</del>/.zshrc中不用再额外设置<code>POWERLEVEL9K_MODE</code>字段。<br>最后，如果字体没有生效，那就需要手动在<code>系统设置</code>-&gt;<code>字体</code>-&gt;<code>等宽字体</code>中设置Hack字体了。如下图：<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_zsh_font_demo.webp" alt=""></p>
+<h4 id="zsh必备插件安装"><a href="#zsh必备插件安装" class="headerlink" title="zsh必备插件安装"></a>zsh必备插件安装</h4><h5 id="参数补全插件-zsh-completions"><a href="#参数补全插件-zsh-completions" class="headerlink" title="参数补全插件 zsh-completions"></a>参数补全插件 zsh-completions</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions</span><br></pre></td></tr></table></figure>
+
+<h5 id="语法高亮插件-zsh-syntax-highlighting"><a href="#语法高亮插件-zsh-syntax-highlighting" class="headerlink" title="语法高亮插件 zsh-syntax-highlighting"></a>语法高亮插件 zsh-syntax-highlighting</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+
+<h5 id="命令自动补全插件-zsh-autosuggestions"><a href="#命令自动补全插件-zsh-autosuggestions" class="headerlink" title="命令自动补全插件 zsh-autosuggestions"></a>命令自动补全插件 zsh-autosuggestions</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+
+<h5 id="thefuck插件"><a href="#thefuck插件" class="headerlink" title="thefuck插件"></a>thefuck插件</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install thefuck</span><br></pre></td></tr></table></figure>
+
+<h5 id="fzf，模糊搜索神器"><a href="#fzf，模糊搜索神器" class="headerlink" title="fzf，模糊搜索神器"></a>fzf，模糊搜索神器</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fzf</span><br></pre></td></tr></table></figure>
+
+<h5 id="自动跳转插件-autojump"><a href="#自动跳转插件-autojump" class="headerlink" title="自动跳转插件 autojump"></a>自动跳转插件 autojump</h5><p>在终端输入d，可以显示刚刚走过的路径，然后按数字选择进入哪一个目录。（这个插件需要自己下)<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_autojump.webp" alt=""></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># clone 到本地</span></span><br><span class="line">git <span class="built_in">clone</span> git://github.com/joelthelion/autojump.git</span><br><span class="line"><span class="comment"># 进入clone目录，接着执行安装文件</span></span><br><span class="line"><span class="built_in">cd</span> autojump</span><br><span class="line">./install.py</span><br><span class="line"><span class="comment"># 接着根据安装完成后的提示，在~/.bashrc最后添加下面语句：</span></span><br><span class="line">vim ~/.bashrc</span><br><span class="line">[[ -s /home/misfit/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; <span class="built_in">source</span> /home/misfit/.autojump/etc/profile.d/autojump.sh</span><br></pre></td></tr></table></figure>
+<p>autojump 工作原理：它会在你每次启动命令时记录你当前位置，并把它添加进它自身的数据库中。这样，某些目录比其它一些目录添加的次数多，这些目录一般就代表你最重要的目录，而它们的“权重”也会增大。</p>
+<h5 id="安装完后启用插件"><a href="#安装完后启用插件" class="headerlink" title="安装完后启用插件"></a>安装完后启用插件</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑~/.zshrc   </span></span><br><span class="line">vim ~/.zshrc    </span><br><span class="line"><span class="comment"># 在plugins后括号里添加安装的插件名字</span></span><br><span class="line">plugins=( git </span><br><span class="line">          zsh-completions</span><br><span class="line">          autojump </span><br><span class="line">          zsh-completions</span><br><span class="line">          zsh-autosuggestions </span><br><span class="line">          zsh-syntax-highlighting</span><br><span class="line">          docker</span><br><span class="line">          docker-compose</span><br><span class="line">          fzf</span><br><span class="line">       )</span><br><span class="line"><span class="comment"># 最后刷新使配置生效</span></span><br><span class="line"><span class="built_in">autoload</span> -U compinit &amp;&amp; compinit</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置环境变量使得zsh和bash都生效"><a href="#配置环境变量使得zsh和bash都生效" class="headerlink" title="配置环境变量使得zsh和bash都生效"></a>配置环境变量使得zsh和bash都生效</h4><p>为了便于在bash和zsh切换后可以使用同样的配置的alias等配置，采用如下方案：<br>自定义配置放在.profile中<br>.bashrc配置文件中使用source ~/.profile加载自定义配置<br>.zshrc配置文件中使用[[ -e ~/.profile ]] &amp;&amp; emulate sh -c ‘source ~/.profile’加载自定义配置<br>配置文件示例如下：</p>
+<ul>
+<li>在.bashrc原有配置最下面新加一行配置<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="keyword">source</span> ~/.<span class="keyword">profile</span></span><br></pre></td></tr></table></figure></li>
+<li>.在zshrc原有配置最下面新加一行配置<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="string">[[ -e ~/.profile ]]</span> &amp;&amp; emulate sh -c <span class="string">'source ~/.profile'</span></span><br></pre></td></tr></table></figure></li>
+<li>.profile<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> EDITOR=/usr/bin/nano</span><br><span class="line"><span class="comment"># oh-my-zsh autojump配置</span></span><br><span class="line">[[ -s /home/misfit/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; <span class="built_in">source</span> /home/misfit/.autojump/etc/profile.d/autojump.sh</span><br><span class="line"><span class="comment"># 在后面加上地址,根据你jdk配置</span></span><br><span class="line"><span class="comment"># 配置Maven环境变量</span></span><br></pre></td></tr></table></figure>
+然后执行:<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.profile</span><br></pre></td></tr></table></figure>
+在bash终端执行:<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+在zsh终端执行:<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+这样把算定义配置放在.profile里，即可在bash和zsh中使用同样的自定义环境了。</li>
+</ul>
+<h3 id="科学上网"><a href="#科学上网" class="headerlink" title="科学上网"></a>科学上网</h3><h4 id="Shadowsocks客户端"><a href="#Shadowsocks客户端" class="headerlink" title="Shadowsocks客户端"></a>Shadowsocks客户端</h4><p>先用manjaro自带的octopi搜索shadowsocks-qt5，然后安装<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_shadowsocks_qt5_00.webp" alt=""><br>安装成功并配置好你自己的ss后，如下:<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_shadowsocks_qt5_01.webp" alt=""><br>此时进入系统设置-代理下配置已经连接上的代理端口，如下图:<br><img src="https://chenjunxin.oss-cn-shenzhen.aliyuncs.com/picture/blogPicture/a55f0545_global_proxy.webp" alt=""><br>此时，Chrome浏览器就可以科学上网了，但这是全局的设置，而且没有规则绕过一些国内的网址，因此还要继续设置。<br>打开Chrome网上应用商店-搜索安装Proxy SwitchyOmega扩展<br>然后设置一个proxy<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_switchyomega_proxysetting.webp" alt=""><br>再新建设置一个auto switch,规则列表填写地址<a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a> ，点击立即更新情景模式，按照如下配置:<br><img src="https://oss.chenjunxin.com/picture/blogPicture/a55f0545_switchyomega_proxysetting_autoswitch.webp" alt=""><br>把这个auto switch情景模式设置为插件默认的就可以了，实现按照规则科学上网，这里是符合规则内的才翻墙，规则之外的直连访问。<strong>记得改回系统刚才设置的全局代理</strong>。</p>
+<h4 id="V2Ray客户端"><a href="#V2Ray客户端" class="headerlink" title="V2Ray客户端"></a>V2Ray客户端</h4><p>运行官方一键安装脚本:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure>
+<p>或者使用Manjaro自带的包管理器安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S v2ray</span><br></pre></td></tr></table></figure>
+<p>编辑/etc/v2ray/config.json文件，可以用<a href="https://intmainreturn0.com/v2ray-config-gen/" target="_blank" rel="noopener">配置生成器</a><br>ArchLinux下的v2ray/config.json<br>使用v2ray自带了一个检查工具v2ray -test检查json文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ v2ray -<span class="built_in">test</span> -config /etc/v2ray/config.json` <span class="comment">#检查json</span></span><br><span class="line">V2Ray 4.22.1 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.13.5 linux/amd64)</span><br><span class="line">A unified platform <span class="keyword">for</span> anti-censorship.</span><br><span class="line">Configuration OK.</span><br></pre></td></tr></table></figure>
+<p>显示OK就表示没问题了，可以开启本机的开机自启服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> v2ray  <span class="comment">#开机自启v2ray</span></span><br><span class="line">systemctl start v2ray   <span class="comment">#启动v2ray</span></span><br></pre></td></tr></table></figure>
+<p>浏览器代理实现同上的shaodowsocks方式。</p>
+<h4 id="终端代理"><a href="#终端代理" class="headerlink" title="终端代理"></a>终端代理</h4><p>为了解决终端下载被墙服务器的安装包失败的问题，所以需要让终端也可以翻墙，顺便提升下载速度。工具有polipo 和 privoxy 两种,polipo 貌似只能全局代理，privoxy 全局/自动两种代理方式都可以实现。<strong>全局代理下，访问 localhost 时也会走代理，可能导致无法正常访问本地服务</strong>。</p>
+<h5 id="privoxy-实现全局和自动代理"><a href="#privoxy-实现全局和自动代理" class="headerlink" title="privoxy 实现全局和自动代理"></a>privoxy 实现全局和自动代理</h5><p>privoxy 可以配置 .action 格式的代理规则文件。通过控制规则文件实现全局和自动代理。<br>action 文件可以手动编辑，也可以从 gfwlist 生成。<br>下面将先介绍 privoxy 的安装配置，再介绍 action 文件的生成。</p>
+<h6 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h6><p>安装 privoxy：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yay -S privoxy</span><br></pre></td></tr></table></figure>
+<p>进入目录 <code>/etc/privoxy</code>，可以看到目录结构大致为：</p>
+<ul>
+<li><code>config</code> 配置文件，这个文件很长。。</li>
+<li><code>*.action</code> 代理规则文件</li>
+<li><code>*.filter</code> 过滤规则文件</li>
+<li><code>trust</code> 不造干嘛用</li>
+<li><code>templates/</code> 同上</li>
+</ul>
+<p>开始修改配置文件。<br>privoxy 有 filter （过滤）的功能，可以用来实现广告拦截。不过这里只希望实现自动代理，在配置文件中把 filter 部分注释掉：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 大约在435行</span></span><br><span class="line"><span class="comment"># filterfile default.filter</span></span><br><span class="line"><span class="comment"># filterfile user.filter      # User customizations</span></span><br></pre></td></tr></table></figure>
+
+<p>我们将使用自定义的 action 文件，所以把默认的 action 文件注释掉，并添加自定义文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 386行左右</span></span><br><span class="line"><span class="comment"># 默认的 action 文件</span></span><br><span class="line"><span class="comment"># actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.</span></span><br><span class="line"><span class="comment"># actionsfile default.action   # Main actions file</span></span><br><span class="line"><span class="comment"># actionsfile user.action      # User customizations</span></span><br><span class="line"><span class="comment"># 自定义 action 文件</span></span><br><span class="line">actionsfile my.action</span><br></pre></td></tr></table></figure>
+<p>可以指定转换后的 HTTP 代理地址，这里直接使用默认端口 8118：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 785行左右</span></span><br><span class="line">listen-address  127.0.0.1:8118</span><br><span class="line">listen-address  [::1]:8118</span><br></pre></td></tr></table></figure>
+<p>如果代理规则直接写在配置文件 config 中，那么代理规则和本地 SS 代理地址是写在一起的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># / 代表匹配全部 URL，即全局代理</span></span><br><span class="line">forward-socks5 / 127.0.0.1:1081 .</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 根据规则自动代理</span></span><br><span class="line">forward-socks5 .google.com 127.0.0.1:1081 .</span><br></pre></td></tr></table></figure>
+<p><strong>注意！每行最后还有一个点。</strong><br>实现全局代理就是第一种写法了。<br>但是如果要自动代理，第二种直接写在配置文件里的做法其实不太合适，更合适的做法是写成 action 文件，配置文件中只管引用。<br>把上面的注释掉。<br>新建 action 文件 my.action，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行表示本 action 文件中所有条目都使用代理</span></span><br><span class="line">&#123;+forward-override&#123;forward-socks5 127.0.0.1:1081 .&#125;&#125;</span><br><span class="line"><span class="comment"># 添加一条规则</span></span><br><span class="line">.google.com</span><br></pre></td></tr></table></figure>
+<p>把 privoxy 转换后的地址 <a href="http://127.0.0.1:8118" target="_blank" rel="noopener">http://127.0.0.1:8118</a> 添加到环境变量，可以参照 polipo 部分。<br>启动 privoxy，这时应该可以正常访问 Google 了：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">service privoxy start</span><br><span class="line">curl www.google.com</span><br></pre></td></tr></table></figure>
+<p>下面看一下怎么用 gfwlist 生成 action 文件。</p>
+<h6 id="生成-action-文件"><a href="#生成-action-文件" class="headerlink" title="生成 action 文件"></a>生成 action 文件</h6><p>配置文件 config 或 action 文件修改后不需要重启 privoxy。<br>使用的工具是 <a href="https://github.com/snachx/gfwlist2privoxy" target="_blank" rel="noopener">gfwlist2privoxy</a>。这个工具很简单，文档就几行，写得也很清楚。<br>安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install gfwlist2privoxy</span><br></pre></td></tr></table></figure>
+<p>gfwlist2privoxy 不支持 python3.x，安装时注意使用的是 pip2 还是 pip3。<br>参数说明：</p>
+<ul>
+<li><code>-i/--input</code> 输入，本地 gfwlist 文件或文件 URL。这里使用上面的 gfwlist</li>
+<li><code>-f/ --file</code> 输出，即生成的 action 文件的目录。这里输出到  <code>/etc/privoxy/gfwlist.action</code></li>
+<li><code>-p/ --proxy</code> SS 代理地址，生成后可以修改。这里是 <code>127.0.0.1:1081</code></li>
+<li><code>-t/ --type</code> 代理类型，生成后也可以修改。这里是 <code>socks5</code></li>
+<li><code>--user-rule</code> 用户自定义规则文件，这个文件中的规则会被追加到 gfwlist 生成的规则后面</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gfwlist2privoxy -i https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt -f /etc/privoxy/gfwlist.action -p 127.0.0.1:1081 -t socks5</span><br></pre></td></tr></table></figure>
+<p>得到文件 <code>/etc/privoxy/gfwlist.action</code>,<a href="https://oss.chenjunxin.com/files/gfwlist.action" target="_blank" rel="noopener">下载地址</a>。</p>
+<p>最后，把<code>/etc/privoxy/config</code> 中的<code>actionsfile my.action</code> 改为 <code>actionsfile gfwlist.action</code>就完成了。</p>
+<p>启动 privoxy.service 服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start privoxy.service</span><br><span class="line">systemctl -l status privoxy.service</span><br></pre></td></tr></table></figure>
+
+<p>配置环境变量<br>在<del>/.bashrc或者</del>/.zshrc中输入</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">export https_proxy=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8118</span></span><br><span class="line">export http_proxy=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8118</span></span><br></pre></td></tr></table></figure>
+<p>这样就完成代理的设置了。</p>
+<h2 id="KDE"><a href="#KDE" class="headerlink" title="KDE"></a>KDE</h2><h3 id="KDE插件"><a href="#KDE插件" class="headerlink" title="KDE插件"></a>KDE插件</h3><ul>
+<li>Resource Monitor（系统资源监控）：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yay -S plasma5-applets-resources-monitor</span><br></pre></td></tr></table></figure></li>
+<li>Netspeed Widget（网络监控）：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yay -S plasma5-applets-netspeed</span><br></pre></td></tr></table></figure></li>
+<li>Latte Dock：<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">sudo pacman -S latte-dock</span></span><br></pre></td></tr></table></figure></li>
+<li>Global Menu<br>可以访问<a href="https://store.kde.org/" target="_blank" rel="noopener">https://store.kde.org/</a> 找插件，或者在AUR包的网站上根据插件名找是否有相应的包安装。</li>
+</ul>
+<h3 id="KDE设置"><a href="#KDE设置" class="headerlink" title="KDE设置"></a>KDE设置</h3><p>一些桌面设置：<br>显示：<br>屏幕 120% 放大： 系统设置 &gt; 显示 &gt; 全局缩放&gt; 1.2 </p>
+<p>全局菜单：<br>因为有了 Latte Dock，不再需要任务栏了，取而代之的是全局菜单。需要添加全局菜单的桌面部件</p>
+<figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line">sudo pacman -S appmenu-gtk-<span class="class"><span class="keyword">module</span></span></span><br><span class="line">sudo pacman -S libdbusmenu-glib  <span class="comment"># For electron apps menu</span></span><br></pre></td></tr></table></figure>
+
+<p>锁屏：<br>系统设置 &gt; 工作空间行为 &gt; 锁屏 &gt; 键盘快捷键 设为 Meta + L 。</p>
+<p>KDE 桌面动画：<br>系统设置 &gt; 工作空间行为 &gt; 桌面特效 设置你喜欢的桌面效果。</p>
+<p>打开文件：<br>KDE 默认是单击打开文件，需要修改成跟Window一样的话：<br>系统设置 &gt; 工作空间行为 &gt; 常规行为 &gt; 点击行为</p>
+<h1 id="一些命令与技巧"><a href="#一些命令与技巧" class="headerlink" title="一些命令与技巧"></a>一些命令与技巧</h1><h2 id="常用pacman命令"><a href="#常用pacman命令" class="headerlink" title="常用pacman命令"></a>常用pacman命令</h2><h3 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h3><p>在 Archlinux系 中，使用一条命令即可对整个系统进行更新:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pacman -Syu</span><br></pre></td></tr></table></figure>
+<p>如果你已经使用pacman -Sy将本地的包数据库与远程的仓库进行了同步，也可以只执行:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pacman -Su</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h3><p><code>pacman -S</code> 包名：例如，执行 <code>pacman -S firefox</code> 将安装 Firefox<br>你也可以同时安装多个包，只需以空格分隔包名即可<br><code>pacman -Sy</code> 包名：与上面命令不同的是，该命令将在同步包数据库后再执行安装<br><code>pacman -Sv</code> 包名：在显示一些操作信息后执行安装<br><code>pacman -U</code>：安装本地包，其扩展名为 pkg.tar.gz<br><code>pacman -U http://www.example.com/repo/example.pkg.tar.xz</code> 安装一个远程包（不在pacman配置的源里面）</p>
+<h3 id="删除包"><a href="#删除包" class="headerlink" title="删除包"></a>删除包</h3><p><code>pacman -R</code> 包名：该命令将只删除包，保留其全部已经安装的依赖关系<br><code>pacman -Rs</code> 包名：在删除包的同时，删除其所有没有被其他已安装软件包使用的依赖<br><code>pacman -Rsc</code> 包名：在删除包的同时，删除所有依赖这个软件包的程序<br><code>pacman -Rd</code> 包名：在删除包时不检查依赖</p>
+<h3 id="搜索包"><a href="#搜索包" class="headerlink" title="搜索包"></a>搜索包</h3><p><code>pacman -Ss</code> 关键字：在仓库中搜索含关键字的包<br><code>pacman -Qs</code> 关键字： 搜索已安装的包<br><code>pacman -Qi</code> 包名：查看有关包的详尽信息<br><code>pacman -Ql</code> 包名：列出该包的文件</p>
+<h3 id="其他用法"><a href="#其他用法" class="headerlink" title="其他用法"></a>其他用法</h3><p><code>pacman -Sw</code> 包名：只下载包，不安装<br><code>pacman -Sc</code>：清理未安装的包文件，包文件位于/var/cache/pacman/pkg/目录<br><code>pacman -Scc</code>：清理所有的缓存文件</p>
+<h3 id="pacman替代命令yay"><a href="#pacman替代命令yay" class="headerlink" title="pacman替代命令yay"></a>pacman替代命令yay</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S yay</span><br></pre></td></tr></table></figure>
+<p>yay 的命令参数跟pacman参数基本一致。</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="查看网卡信息"><a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ lspci|grep -i net</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看已经启用的服务"><a href="#查看已经启用的服务" class="headerlink" title="查看已经启用的服务"></a>查看已经启用的服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl list-unit-files --state=enabled</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看关联性服务启动耗费时间"><a href="#查看关联性服务启动耗费时间" class="headerlink" title="查看关联性服务启动耗费时间"></a>查看关联性服务启动耗费时间</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemd-analyze critical-chain xxx.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="按时间排序，查看服务启动耗费时间"><a href="#按时间排序，查看服务启动耗费时间" class="headerlink" title="按时间排序，查看服务启动耗费时间"></a>按时间排序，查看服务启动耗费时间</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemd-analyze blame</span><br></pre></td></tr></table></figure>
+
+<h3 id="GIT代理设置"><a href="#GIT代理设置" class="headerlink" title="GIT代理设置"></a>GIT代理设置</h3><p>推荐放到 .zshrc 中作为常用命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git-<span class="function"><span class="title">proxy</span></span>()&#123;</span><br><span class="line">  git config --global http.proxy socks5://127.0.0.1:1080</span><br><span class="line">  git config --global https.proxy socks5://127.0.0.1:1080</span><br><span class="line">&#125;</span><br><span class="line">git-<span class="function"><span class="title">noproxy</span></span>()&#123;</span><br><span class="line">  git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">  git config --global --<span class="built_in">unset</span> https.proxy</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="一些小技巧"><a href="#一些小技巧" class="headerlink" title="一些小技巧"></a>一些小技巧</h2><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>F12：拉幕式终端<br>Alt+空格：调出全局搜索<br>Ctrl+F8：切出多桌面窗口  </p>
+<h3 id="鼠标操作"><a href="#鼠标操作" class="headerlink" title="鼠标操作"></a>鼠标操作</h3><p>在左上角撮几下，平铺所有窗口。<br>鼠标滚轮好慢：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S imwheel <span class="comment">#配置文件自己上网查</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<li><a href="https://michael728.github.io/2019/08/03/linux-manjaro-install/" target="_blank" rel="noopener">Manjaro 安装体验小结</a></li>
+<li><a href="https://zzycreate.github.io/2018/11/03/Manjaro%E7%9A%84%E5%B0%9D%E8%AF%95/" target="_blank" rel="noopener">Manjaro的尝试</a></li>
+<li><a href="https://www.cnblogs.com/zryabc/p/11408297.html" target="_blank" rel="noopener">Manjaro安装，配置，美化指南</a></li>
+<li><a href="https://printempw.github.io/setting-up-manjaro-linux/" target="_blank" rel="noopener">Manjaro Linux 踩坑调教记录</a></li>
+<li><a href="https://blog.csdn.net/was172/article/details/82826607" target="_blank" rel="noopener">Manjaro常用软件和命令行推荐</a></li>
+<li><a href="juejin.im/post/5c91ff5ee51d4534446edb9a">polipo/privoxy 实现 Linux 系统全局/自动代理</a></li>
+<li><a href="https://www.codeleading.com/article/22561057096/" target="_blank" rel="noopener">centos privoxy action 分流，黑白名单，不走代理</a></li>
+<li><a href="https://www.teaper.dev/2019/06/02/v2ray/" target="_blank" rel="noopener">学习利器V2ray了解一下</a></li>
+<li><a href="https://aiezu.com/article/linux_bash_set_proxy.html" target="_blank" rel="noopener">Linux bash终端设置代理(proxy)访问</a></li>
+<li><a href="https://xueyp.github.io/linux/2019/01/15/linux-%E5%88%87%E6%8D%A2%E5%88%B0zsh.html" target="_blank" rel="noopener">Linux-zsh与bash共用</a></li>
+<li><a href="https://studytous886237090.wordpress.com/2018/07/04/manjaro%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E5%AE%89%E8%A3%85/" target="_blank" rel="noopener">Manjaro中文输入法安装</a></li>
+<li><a href="https://forum.manjaro.org/t/sunpinyin-cloudpinyin/114282" target="_blank" rel="noopener">比较几种中文输入法后，我最终选择了sunpinyin + cloudpinyin组合</a></li>
+<li><a href="https://www.codetd.com/article/4515916" target="_blank" rel="noopener">manjaro xfce 18.0 踩坑记录</a></li>
+<li><a href="https://blog.triplez.cn/manjaro-quick-start/" target="_blank" rel="noopener">将干净的 Manjaro 快速配置为工作环境</a></li>
+<li><a href="https://rovo98.coding.me/posts/3babee60/" target="_blank" rel="noopener">记录一次linux系统迁移过程</a></li>
+<li><a href="https://mrswolf.github.io/zh-cn/2019/05/24/manjaro%E8%B8%A9%E5%9D%91%E8%AE%B0/#SSD%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">manjaro踩坑记</a></li>
+<li><a href="https://ywnz.com/linuxjc/4850.html" target="_blank" rel="noopener">在Manjaro Linux下安装驱动程序的两种方法</a></li>
+<li><a href="http://www.zmonster.me/2015/04/17/tesseract-install-usage.html" target="_blank" rel="noopener">Tesseract:安装与命令行使用</a></li>
+<li><a href="https://www.wj0511.com/site/detail.html?id=257" target="_blank" rel="noopener">linux 环境下安装tesseract</a></li>
+<li><a href="https://blog.csdn.net/pangyunsheng/article/details/79372845" target="_blank" rel="noopener">提取图片文字——linux下tesseract-ocr安装编译</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">Fcitx (简体中文)</a></li>
+<li><a href="https://www.wannaexpresso.com/2020/03/26/fcitx5/" target="_blank" rel="noopener">在Manjaro上优雅地使用Fcitx5</a></li>
+<li><a href="https://zjukuny.github.io/posts/fcitx5/" target="_blank" rel="noopener">尝试Fcitx5</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Manjaro</category>
+      </categories>
+      <tags>
+        <tag>Manjaro安装和配置</tag>
+      </tags>
+  </entry>
+</search>
